@@ -36,38 +36,38 @@ public class Persona {
      * The id.
      */
     @DatabaseField(generatedId = true)
-    public int id;
+    private int id;
     /**
      * The name.
      */
     @DatabaseField(canBeNull = false)
-    public String nombre;
+    private String nombre;
     /**
      * The direction.
      */
     @DatabaseField(canBeNull = false)
-    public String direccion;
+    private String direccion;
     /**
      * The phone.
      */
     @DatabaseField(canBeNull = false)
-    public String telefonoFijo;
+    private String telefonoFijo;
     /**
      * The mobile phone number.
      */
     @DatabaseField(canBeNull = false)
-    public String telefonoMovil;
+    private String telefonoMovil;
     /**
      * The email.
      */
     @DatabaseField(canBeNull = false)
-    public String email;
+    private String email;
 
     /**
      * The rut.
      */
     @DatabaseField(canBeNull = false, index = true)
-    public String rut;
+    private String rut;
 
 
     public int getId() {
@@ -106,7 +106,6 @@ public class Persona {
     /**
      * The constructor from the class Persona.
      *
-     * @param id
      * @param nombre
      * @param direccion
      * @param telefonoFijo
@@ -115,8 +114,8 @@ public class Persona {
      * @param rut
      */
 
-    public Persona(int id, String nombre, String direccion, String telefonoFijo, String telefonoMovil, String email, String rut) {
-        this.id = id;
+    public Persona(String nombre, String direccion, String telefonoFijo, String telefonoMovil, String email, String rut) {
+
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefonoFijo = telefonoFijo;
