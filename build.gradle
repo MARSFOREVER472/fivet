@@ -17,6 +17,8 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.projectlombok:lombok:1.18.22'
+
     // Testing
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
@@ -35,11 +37,15 @@ dependencies {
     // Database
     implementation 'com.h2database:h2:2.1.210'
     implementation 'org.xerial:sqlite-jdbc:3.36.0.3'
+    implementation 'org.postgresql:postgresql:42.3.4'
+    implementation 'mysql:mysql-connector-java:8.0.28'
 
     // Logger
     implementation 'org.slf4j:slf4j-api:1.7.36'
     implementation 'ch.qos.logback:logback-classic:1.2.11'
 
+    // Commons Lang
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
 }
 
 test {
