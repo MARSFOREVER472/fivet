@@ -69,7 +69,6 @@ public class Persona {
     @DatabaseField(canBeNull = false, index = true)
     private String rut;
 
-
     public int getId() {
         return id;
     }
