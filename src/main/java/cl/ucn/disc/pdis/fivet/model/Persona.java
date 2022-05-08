@@ -25,6 +25,7 @@ package cl.ucn.disc.pdis.fivet.model;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
+import lombok.Getter;
 
 /**
  * Persona model.
@@ -68,6 +69,13 @@ public class Persona {
      */
     @DatabaseField(canBeNull = false, index = true)
     private String rut;
+
+    /**
+     * The password of the class Persona.
+     */
+    @Getter
+    @DatabaseField(canBeNull = false)
+    private String password;
 
     public int getId() {
         return id;
