@@ -42,3 +42,12 @@ message Examen {
 message Foto {
   string url = 1;
 }
+
+message Credencial {
+  string login = 1;
+  string password = 2;
+}
+
+service FivetService {
+  rpc autenticar(Credencial) returns(Persona){}
+}

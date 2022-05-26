@@ -49,6 +49,15 @@ public class FivetControllerImpl implements FivetController {
         this.daoPersona = new ORMLiteDAO<>(cs,Persona.class);
     }
 
+    @Override
+    public Optional<Persona> retrieveByLogin(String login) {
+        var persona = this.daoPersona.get("rut", login);
+        if(persona.isPresent()) {
+            return persona;
+        }
+        return this.daoPersona.get("email", login);
+    }
+
     /**
      * Authentication of a person in the system
      * @param login The login account
@@ -85,6 +94,12 @@ public class FivetControllerImpl implements FivetController {
         persona.setPassword(BCrypt.hashpw(password,
                 BCrypt.gensalt(12)));
         this.daoPersona.save(persona);
+    }
+
+    @Override
+    public void delete(Integer idPersona) {
+        this.daoPersona.delete(idPersona);
+
     }
 
 

@@ -19,24 +19,31 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- *//*
+ */
 
 package cl.ucn.disc.pdis.fivet;
 
-import cl.ucn.disc.pdis.fivet.model.Persona;
+
+import cl.ucn.disc.pdis.fivet.grpc.*;
+import cl.ucn.disc.pdis.fivet.services.FivetController;
+import cl.ucn.disc.pdis.fivet.services.FivetControllerImpl;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 import lombok.SneakyThrows;
-import org.h2.tools.Server;
+import lombok.extern.slf4j.Slf4j;
+import io.grpc.Server;
 
 import java.io.IOException;
+import java.util.Optional;
 
+@Slf4j
 public class FivetServer {
 
     @SneakyThrows({InterruptedException.class, IOException.class})
     public static void main(String[] args) {
+        FivetServiceImpl fivetService = new FivetServiceImpl("jdbc:h2:mem:fivet");
         Server server = ServerBuilder.forPort(5000)
-                .addService(new FivetServiceImpl())
+                .addService(fivetService)
                 .build()
                 .start();
 
@@ -44,8 +51,27 @@ public class FivetServer {
     }
 
     private static class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
-        public void autenticar(Credencial c, StreamObserver<Persona> sop) {
-            super.autenticar(c, sop);
+        private final FivetController fivetController;
+        public FivetServiceImpl(String databaseUrl){
+            this.fivetController = new FivetControllerImpl(databaseUrl);
+        }
+
+        @Override
+        public void autenticar(Credencial request, StreamObserver<cl.ucn.disc.pdis.fivet.grpc.Persona> responseObserver) {
+            Optional<cl.ucn.disc.pdis.fivet.model.Persona>  persona = this.fivetController.retrieveByLogin(request.getLogin());
+            if(persona.isPresent()) {
+                responseObserver.onNext(Persona.newBuilder()
+                        .setRut(persona.get().getRut())
+                        .setNombre(persona.get().getNombre())
+                        .setEmail(persona.get().getEmail())
+                        .setDireccion(persona.get().getDireccion())
+                        .build()
+                );
+                responseObserver.onCompleted();
+            }
+            else {
+                responseObserver.onError(new RuntimeException("Persona not found"));
+            }
         }
     }
-} */
+}

@@ -32,6 +32,7 @@ import java.util.Optional;
  */
 public interface FivetController {
 
+    Optional<Persona> retrieveByLogin(String login);
     /**
      *
      * @param login The login account
@@ -48,4 +49,6 @@ public interface FivetController {
     void add(Persona persona, String password);
 
     // Ficha
+
+    void delete(Integer idPersona);
 }
