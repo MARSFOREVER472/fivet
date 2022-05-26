@@ -23,7 +23,7 @@
 
 package cl.ucn.disc.pdis.fivet.model;
 
-import cl.ucn.disc.pdis.fivet.model.orm.BaseEntity;
+import cl.ucn.disc.pdis.fivet.orm.BaseEntity;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 import lombok.AllArgsConstructor;
@@ -43,7 +43,7 @@ import lombok.NoArgsConstructor;
 public final class Foto extends BaseEntity {
 
     /**
-     * The url of the image
+     * The url of the image.
      */
     @Getter
     @DatabaseField(canBeNull = false)

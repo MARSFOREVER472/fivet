@@ -23,7 +23,7 @@
 
 package cl.ucn.disc.pdis.fivet.model;
 
-import cl.ucn.disc.pdis.fivet.model.orm.BaseEntity;
+import cl.ucn.disc.pdis.fivet.orm.BaseEntity;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 import lombok.AllArgsConstructor;
@@ -47,23 +47,23 @@ public class Control extends BaseEntity {
     /**
      * The fecha of the control carried out.
      */
-     @Getter
-     @DatabaseField(canBeNull = false)
-     private ZonedDateTime fecha;
+    @Getter
+    @DatabaseField(canBeNull = false)
+    private ZonedDateTime fecha;
 
     /**
      * The patient of the temperatura in the control.
      */
-     @Getter
-     @DatabaseField(canBeNull = false)
-     private Float temperatura;
+    @Getter
+    @DatabaseField(canBeNull = false)
+    private Float temperatura;
 
     /**
      * The peso of the patient in the control.
      */
-     @Getter
-     @DatabaseField(canBeNull = false)
-     private Float peso;
+    @Getter
+    @DatabaseField(canBeNull = false)
+    private Float peso;
 
     /**
      * The altura of the patient in the control.
@@ -75,16 +75,16 @@ public class Control extends BaseEntity {
     /**
      * The patient's diagnostico.
      */
-     @Getter
-     @DatabaseField(canBeNull = false)
-     private String diagnostico;
+    @Getter
+    @DatabaseField(canBeNull = false)
+    private String diagnostico;
 
     /**
      * The vet's name.
      */
-     @Getter
-     @DatabaseField(canBeNull = false)
-     private String nomVeterinario;
+    @Getter
+    @DatabaseField(canBeNull = false)
+    private String nomVeterinario;
 
     /**
      * The date of the next date.
@@ -92,5 +92,4 @@ public class Control extends BaseEntity {
     @Getter
     @DatabaseField(canBeNull = false)
     private ZonedDateTime proxControl;
-
 }

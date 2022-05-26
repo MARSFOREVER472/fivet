@@ -21,7 +21,7 @@
  *
  */
 
-package cl.ucn.disc.pdis.fivet.model.orm;
+package cl.ucn.disc.pdis.fivet.orm;
 
 import com.j256.ormlite.field.FieldType;
 import com.j256.ormlite.field.SqlType;

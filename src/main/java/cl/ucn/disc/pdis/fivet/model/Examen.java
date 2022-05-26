@@ -23,7 +23,7 @@
 
 package cl.ucn.disc.pdis.fivet.model;
 
-import cl.ucn.disc.pdis.fivet.model.orm.BaseEntity;
+import cl.ucn.disc.pdis.fivet.orm.BaseEntity;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 import lombok.AllArgsConstructor;
@@ -54,8 +54,7 @@ public class Examen extends BaseEntity {
     /**
      * The date the test was taken.
      */
-     @Getter
-     @DatabaseField(canBeNull = false)
-     private ZonedDateTime fecha;
-
+    @Getter
+    @DatabaseField(canBeNull = false)
+    private ZonedDateTime fecha;
 }
