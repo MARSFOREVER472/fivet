@@ -1,5 +1,16 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.18'
+    }
+}
+
 plugins {
     id 'java'
+    id 'com.google.protobuf' version '0.8.18'
+    id 'idea'
 }
 
 group 'cl.ucn.disc.pdis'
@@ -17,7 +28,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.projectlombok:lombok:1.18.22'
+
 
     // Testing
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
@@ -46,6 +57,42 @@ dependencies {
 
     // Commons Lang
     implementation 'org.apache.commons:commons-lang3:3.12.0'
+
+    // gRPC
+    runtimeOnly 'io.grpc:grpc-netty-shaded:1.45.1'
+    implementation 'io.grpc:grpc-protobuf:1.45.1'
+    implementation 'io.grpc:grpc-stub:1.45.1'
+    compileOnly 'org.apache.tomcat:annotations-api:6.0.53'
+
+    // Crypto Library
+    implementation 'org.springframework.security:spring-security-crypto:5.6.3'
+    runtimeOnly 'org.bouncycastle:bcprov-jdk15on:1.70'
+    runtimeOnly 'org.springframework:spring-jcl:5.3.19'
+}
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.20.0'
+    }
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.45.1'
+        }
+    }
+
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {}
+        }
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'build/generated/source/proto/main/grpc'
+            srcDirs 'build/generated/source/proto/main/java'
+        }
+    }
 }
 
 test {

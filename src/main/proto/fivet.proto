@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "cl.ucn.disc.pdis.fivet.grpc";
+
+message Persona {
+  string rut = 1;
+  string nombre = 2;
+  string email = 3;
+  string direccion = 4;
+  string telefonoFijo = 5;
+  string telefonoMovil = 6;
+  string password = 7;
+}
+
+message FichaMedica {
+  int32 numeroFicha = 1;
+  string nombrePaciente = 2;
+  string especie = 3;
+  string fechaNacimiento = 4;
+  string raza = 5;
+  string sexo = 6;
+  string color = 7;
+  string tipo = 8;
+}
+
+message Control {
+  string fecha = 1;
+  float temperatura = 2;
+  float peso = 3;
+  float altura = 4;
+  string diagnostico = 5;
+  string nomVeterinario = 6;
+  string proxControl = 7;
+}
+
+message Examen {
+  string nombre = 1;
+  string fecha = 2;
+}
+
+message Foto {
+  string url = 1;
+}
