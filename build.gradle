@@ -16,6 +16,7 @@ plugins {
 group 'cl.ucn.disc.pdis'
 version '0.0.1'
 sourceCompatibility = '17'
+targetCompatibility = '17'
 
 configurations {
     compileOnly {
@@ -35,8 +36,10 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 
     // Lombok
-    compileOnly 'org.projectlombok:lombok:1.18.22'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
 
     // JPA
     implementation 'javax.persistence:javax.persistence-api:2.2'
@@ -54,6 +57,8 @@ dependencies {
     // Logger
     implementation 'org.slf4j:slf4j-api:1.7.36'
     implementation 'ch.qos.logback:logback-classic:1.2.11'
+    testImplementation 'org.slf4j:slf4j-api:1.7.36'
+    testImplementation 'ch.qos.logback:logback-classic:1.2.11'
 
     // Commons Lang
     implementation 'org.apache.commons:commons-lang3:3.12.0'
