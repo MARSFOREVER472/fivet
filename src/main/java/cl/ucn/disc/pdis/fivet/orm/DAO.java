@@ -21,7 +21,7 @@
  *
  */
 
-package cl.ucn.disc.pdis.fivet.model.orm;
+package cl.ucn.disc.pdis.fivet.orm;
 
 import java.util.List;
 import java.util.Optional;
@@ -66,6 +66,15 @@ public interface DAO<T extends BaseEntity> {
      * @param id of th et to delete.
      */
     void delete(Integer id);
+
+    /**
+     * Get optional T by some attribute.
+     *
+     * @param attribute to filter.
+     * @param value     of attribute.
+     * @return the optional T
+     */
+    Optional<T> get(String attribute, Object value);
 
 
 }

@@ -51,7 +51,7 @@ public class TestDatabase {
             // Create dao.
             Dao<Persona, Integer> daoPersona = DaoManager.createDao(connectionSource, Persona.class);
 
-            Persona persona = new Persona("nombre", "direccion", "numeroTelefono", "telefonoMovil", "email", "rut");
+            Persona persona = new Persona();
             int row = daoPersona.create(persona);
             Assertions.assertEquals(1, row);
 
