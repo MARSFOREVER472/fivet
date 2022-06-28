@@ -30,6 +30,8 @@ import lombok.*;
 
 /**
  * Persona model.
+ *
+ * @author Marcelo Lam.
  */
 @NoArgsConstructor
 @AllArgsConstructor
@@ -76,7 +78,7 @@ public final class Persona extends BaseEntity {
         private String rut;
 
         /**
-         * The password of the class Persona.
+         * The password.
          */
         @Getter
         @Setter

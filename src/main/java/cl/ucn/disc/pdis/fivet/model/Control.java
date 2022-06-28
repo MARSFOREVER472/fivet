@@ -52,28 +52,28 @@ public class Control extends BaseEntity {
     private ZonedDateTime fecha;
 
     /**
-     * The patient of the temperatura in the control.
+     * The patient of the temperature in the control.
      */
     @Getter
     @DatabaseField(canBeNull = false)
     private Float temperatura;
 
     /**
-     * The peso of the patient in the control.
+     * The weight of the patient in the control.
      */
     @Getter
     @DatabaseField(canBeNull = false)
     private Float peso;
 
     /**
-     * The altura of the patient in the control.
+     * The height of the patient in the control.
      */
     @Getter
     @DatabaseField(canBeNull = false)
     private Float altura;
 
     /**
-     * The patient's diagnostico.
+     * The patient's diagnostic.
      */
     @Getter
     @DatabaseField(canBeNull = false)
@@ -83,13 +83,13 @@ public class Control extends BaseEntity {
      * The vet's name.
      */
     @Getter
-    @DatabaseField(canBeNull = false)
-    private String nomVeterinario;
+    @DatabaseField(foreign = true, foreignAutoRefresh = true, columnName = "veterinario_id", canBeNull = false)
+    private Persona veterinario;
 
     /**
-     * The date of the next date.
+     * The Medical Record.
      */
     @Getter
-    @DatabaseField(canBeNull = false)
-    private ZonedDateTime proxControl;
+    @DatabaseField(foreign = true, foreignAutoRefresh = true, columnName = "fichamedica_id")
+    private FichaMedica fichaMedica;
 }
