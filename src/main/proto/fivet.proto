@@ -3,51 +3,94 @@ syntax = "proto3";
 option java_multiple_files = true;
 option java_package = "cl.ucn.disc.pdis.fivet.grpc";
 
-message Persona {
+
+message PersonaEntity {
   string rut = 1;
   string nombre = 2;
   string email = 3;
   string direccion = 4;
   string telefonoFijo = 5;
   string telefonoMovil = 6;
-  string password = 7;
+  // string password = 7;
 }
 
-message FichaMedica {
+message FichaMedicaEntity {
   int32 numeroFicha = 1;
   string nombrePaciente = 2;
   string especie = 3;
   string fechaNacimiento = 4;
   string raza = 5;
-  string sexo = 6;
+  SexoEntity sexo = 6;
   string color = 7;
   string tipo = 8;
+  PersonaEntity duenio = 9;
+  repeated ControlEntity controles = 10;
 }
 
-message Control {
+message ControlEntity {
   string fecha = 1;
   float temperatura = 2;
   float peso = 3;
   float altura = 4;
   string diagnostico = 5;
-  string nomVeterinario = 6;
-  string proxControl = 7;
+  PersonaEntity veterinario = 6;
 }
 
-message Examen {
-  string nombre = 1;
-  string fecha = 2;
+enum SexoEntity {
+  UNDEFINED = 0;
+  MACHO = 1;
+  HEMBRA = 2;
 }
 
-message Foto {
-  string url = 1;
+message FichaMedicaReply {
+  FichaMedicaEntity fichaMedica = 1;
 }
 
-message Credencial {
+message AddFichaReq {
+  FichaMedicaEntity fichaMedica = 1;
+}
+
+message RetrieveFichaMedicaRequest {
+  int32 numeroFicha = 1;
+}
+
+message SearchFichaMedicaRequest {
+  string query = 1;
+}
+
+message AddPersonaReq {
+  PersonaEntity persona = 1;
+}
+
+message AddControlReq {
+  ControlEntity control = 1;
+}
+
+message ControlRequest {
+  ControlEntity control = 1;
+}
+
+message AuthenticateReq {
   string login = 1;
   string password = 2;
 }
 
+message PersonaReply {
+  PersonaEntity persona = 1;
+}
+
 service FivetService {
-  rpc autenticar(Credencial) returns(Persona){}
+
+  rpc authenticate(AuthenticateReq) returns(PersonaReply) {}
+
+  rpc addControl(AddControlReq) returns(FichaMedicaReply) {}
+
+  rpc retrieveFicha(RetrieveFichaMedicaRequest) returns(FichaMedicaReply) {}
+
+  rpc searchFicha(SearchFichaMedicaRequest) returns (stream FichaMedicaEntity) {}
+
+  rpc addFicha(AddFichaReq) returns(FichaMedicaReply) {}
+
+  rpc addPersona(AddPersonaReq) returns (PersonaReply) {}
+
 }
