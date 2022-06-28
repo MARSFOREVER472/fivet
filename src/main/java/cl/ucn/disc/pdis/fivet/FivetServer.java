@@ -36,6 +36,11 @@ import io.grpc.Server;
 import java.io.IOException;
 import java.util.Optional;
 
+/**
+ * The Server of the Fivet.
+ *
+ * @author Marcelo Lam.
+ */
 @Slf4j
 public class FivetServer {
 
@@ -57,14 +62,20 @@ public class FivetServer {
         }
 
         @Override
-        public void autenticar(Credencial request, StreamObserver<cl.ucn.disc.pdis.fivet.grpc.Persona> responseObserver) {
+        public void autenticar(AuthenticateReq request, StreamObserver<cl.ucn.disc.pdis.fivet.grpc.PersonaReply> responseObserver) {
             Optional<cl.ucn.disc.pdis.fivet.model.Persona>  persona = this.fivetController.retrieveByLogin(request.getLogin());
-            if(persona.isPresent()) {
-                responseObserver.onNext(Persona.newBuilder()
+            if (persona.isPresent()) {
+                PersonaEntity personaEntity = PersonaEntity.newBuilder()
                         .setRut(persona.get().getRut())
-                        .setNombre(persona.get().getNombre())
-                        .setEmail(persona.get().getEmail())
-                        .setDireccion(persona.get().getDireccion())
+                                .setNombre(persona.get().getNombre())
+                                        .setEmail(persona.get().getEmail())
+                                                .setDireccion(persona.get().getDireccion())
+                                                        .setTelefonoFijo(persona.get().getTelefonoFijo())
+                                                                .setTelefonoMovil(persona.get().getTelefonoMovil())
+                                                                        .build();
+
+                responseObserver.onNext(PersonaReply.newBuilder()
+                                .setPersona(personaEntity)
                         .build()
                 );
                 responseObserver.onCompleted();

@@ -23,14 +23,19 @@
 
 package cl.ucn.disc.pdis.fivet;
 
-import cl.ucn.disc.pdis.fivet.grpc.Credencial;
+import cl.ucn.disc.pdis.fivet.grpc.AuthenticateReq;
 import cl.ucn.disc.pdis.fivet.grpc.FivetServiceGrpc;
-import cl.ucn.disc.pdis.fivet.grpc.Persona;
+import cl.ucn.disc.pdis.fivet.grpc.PersonaReply;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.StatusRuntimeException;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * The Client model of the Fivet.
+ *
+ * @author Marcelo Lam.
+ */
 @Slf4j
 public class FivetClient {
 
@@ -48,7 +53,7 @@ public class FivetClient {
         FivetServiceGrpc.FivetServiceBlockingStub stub = FivetServiceGrpc.newBlockingStub(channel);
 
         try {
-            Persona persona = stub.autenticar(Credencial.newBuilder()
+            PersonaReply persona = stub.authenticate(AuthenticateReq.newBuilder()
                     .setLogin("marcelo.lam@alumnos.ucn.cl")
                     .setPassword("mlam123")
                     .build());
