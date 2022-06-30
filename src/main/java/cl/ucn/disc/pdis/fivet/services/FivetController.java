@@ -24,7 +24,10 @@
 package cl.ucn.disc.pdis.fivet.services;
 
 import cl.ucn.disc.pdis.fivet.model.Persona;
+import cl.ucn.disc.pdis.fivet.model.Control;
+import cl.ucn.disc.pdis.fivet.model.FichaMedica;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
