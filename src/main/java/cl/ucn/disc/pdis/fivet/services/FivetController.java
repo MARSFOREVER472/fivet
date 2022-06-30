@@ -32,6 +32,11 @@ import java.util.Optional;
  */
 public interface FivetController {
 
+    /**
+     * Check if the Email or Rut exists in the system
+     * @param login rut or email
+     * @return a persona
+     */
     Optional<Persona> retrieveByLogin(String login);
     /**
      *
@@ -50,5 +55,35 @@ public interface FivetController {
 
     // Ficha
 
+    /**
+     * add a Control in a FichaMedica
+     * @param control to add
+     */
+    void addControl(Control control);
+
+    /**
+     * add a FichaMedica in the system
+     * @param fichaMedica to add
+     */
+    void addFichaMedica(FichaMedica fichaMedica);
+
+    /**
+     * get a FichaMedica by the numeroFicha
+     * @param numeroFicha to use
+     */
+    Optional<FichaMedica> getFichaMedica(Integer numeroFicha);
+
+    /**
+     * search 0 or more FichaMedica and return a List of FichaMedica
+     * @param q to use
+     */
+    List<FichaMedica> searchFichaMedica(String q);
+
+    /**
+     * Delete a persona by id
+     * @param idPersona the id
+     */
     void delete(Integer idPersona);
+
+    // TODO Metodo Ficha
 }
