@@ -45,7 +45,7 @@ public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
 
     /**
      * @param databaseUrl to use.
-     * @throws SQLException
+     * @throws SQLException.
      */
     public FivetServiceImpl(String databaseUrl) throws SQLException {
         this.fivetController = new FivetControllerImpl(databaseUrl, true);
@@ -73,7 +73,7 @@ public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
                             .setNombre("Marcelo")
                             .setRut("197105992")
                             .setEmail("marcelo.lam@alumnos.ucn.cl")
-                            .setDireccion("micasa #3332")
+                            .setDireccion("angamos 0610")
                             .build())
                     .build());
             responseObserver.onCompleted();
@@ -117,6 +117,69 @@ public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
         }
         else {
             //responseObserver.onError(buildException(Code.PERMISSION_DENIED, "Wrong number"));
+        }
+    }
+
+    /**
+     * Search a FichaMedica
+     * @param request to use, contains a FichaMedica
+     * @param responseObserver to use.
+     */
+    public void searchFichaMedica(SearchFichaMedicaReq request, StreamObserver<FichaMedicaReply> responseObserver) {
+        String metadata = request.getQuery();
+
+        if (metadata.isEmpty()) {
+            responseObserver.onError(buildException(Code.INVALID_ARGUMENT, "Invalid Argument"));
+        } else {
+            // 1. By number of fichaMedica
+
+            if (isNumeric(metadata)) {
+                Optional<FichaMedica> optionalFichaMedica =
+                        this.fivetController.retrieveFichaMedica(Integer.parseInt(metadata));
+
+                optionalFichaMedica.ifPresentOrElse(fichaMedica -> {
+                    responseObserver.onNext(FichaMedicaReply.newBuilder()
+                            .setFichaMedica(ModelAdapter.build(fichaMedica))
+                            .build());
+                    responseObserver.onCompleted();
+                }, () -> responseObserver.onError(buildException(Code.NOT_FOUND, "FichaMedica not found")));
+            } else {
+
+                int count = 0;
+                List<FichaMedica> fichaMedicaList = this.fivetController.retrieveAllFichaMedica();
+
+                for (FichaMedica fichaMedica : fichaMedicaList) {
+
+                    // 2. By rut of Duenio
+
+                    if (metadata.equalsIgnoreCase(fichaMedica.getDuenio().getRut())) {
+                        count++;
+                        responseObserver.onNext(FichaMedicaReply.newBuilder()
+                                .setFichaMedica(ModelAdapter.build(fichaMedica))
+                                .build());
+
+                        // 3. By nombre Mascota
+                    } else if (metadata.equalsIgnoreCase(fichaMedica.getNombrePaciente())) {
+                        count++;
+                        responseObserver.onNext(FichaMedicaReply.newBuilder()
+                                .setFichaMedica(ModelAdapter.build(fichaMedica))
+                                .build());
+
+                        // 4. By nombre Duenio
+                    } else if (metadata.equalsIgnoreCase(fichaMedica.getDuenio().getNombre())) {
+                        count++;
+                        responseObserver.onNext(FichaMedicaReply.newBuilder()
+                                .setFichaMedica(ModelAdapter.build(fichaMedica))
+                                .build());
+                    }
+                }
+
+                if (count > 0) {
+                    responseObserver.onCompleted();
+                } else {
+                    responseObserver.onError(buildException(Code.NOT_FOUND, "FichaMedica not found"));
+                }
+            }
         }
     }
 
