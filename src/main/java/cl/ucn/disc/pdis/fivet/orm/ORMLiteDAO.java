@@ -26,7 +26,9 @@ package cl.ucn.disc.pdis.fivet.orm;
 import com.google.common.collect.Lists;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
+import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
+import com.j256.ormlite.table.TableUtils;
 import lombok.NonNull;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -51,14 +53,27 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
      */
     private final Dao<T, Integer> theDao;
 
+    private static ConnectionSource cs;
+
     /**
      * The Constructor of ORMLiteDAO
      * @param cs        the connection to the database.
      * @param clazz     the type of T.
      */
     @SneakyThrows(SQLException.class)
-    public ORMLiteDAO(@NonNull final ConnectionSource cs, @NonNull Class<T> clazz){
+    public ORMLiteDAO(@NonNull final ConnectionSource cs, @NonNull final Class<T> clazz){
         this.theDao = DaoManager.createDao(cs,clazz);
+    }
+
+    /**
+     * The builder of the connection source
+     * @param s to use
+     * @return
+     */
+    @SneakyThrows
+    public static ConnectionSource buildConnectionSource(String s) {
+        cs = new JdbcConnectionSource(s);
+        return cs;
     }
 
 
@@ -80,6 +95,24 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
             return Optional.empty();
         }
         return Optional.of(t);
+    }
+
+    /**
+     * Get optional, T
+     * @param attrib the name of attribute
+     * @param value the value
+     * @return a T
+     */
+    @SneakyThrows
+    @Override
+    public Optional<T> get(String attrib, Object value) {
+        List<T> list = this.dao.queryForEq(attrib, value);
+
+        for (T t : list)
+            if (t.getDeletedAt() == null) {
+                return Optional.of(t);
+            }
+        return Optional.empty();
     }
 
 
@@ -124,7 +157,7 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
     /**
      * Save a T.
      *
-     * @param t to save
+     * @param t to save.
      */
     @SneakyThrows(SQLException.class)
     @Override
@@ -137,7 +170,7 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
     }
 
     /**
-     * Delete a T
+     * Delete a T.
      *
      * @param t to delete
      */
@@ -156,7 +189,7 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
 
 
     /**
-     * Delete a T with id
+     * Delete a T with id.
      *
      * @param id of th et to delete.
      */
@@ -165,6 +198,7 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
     public void delete(Integer id) {
         Optional<T> t = this.get(id);
         if (t.isEmpty()) {
+            log.warn("Entity t {} not found", id);
             return;
         }
         t.get().deletedAt = ZonedDateTime.now();
@@ -175,7 +209,7 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
     }
 
     /**
-     * Remove the deleted T
+     * Remove the deleted T.
      *
      * @param theList to filter.
      * @return the List filtered.
@@ -185,5 +219,15 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
         return theList.stream()
                 .filter(t -> t.getDeletedAt() == null)
                 .toList();
+    }
+
+    /**
+     * Drop and create a new table
+     */
+    @Override
+    @SneakyThrows
+    public void dropAndCreateTable() {
+        TableUtils.dropTable(cs, dao.getDataClass(), true);
+        TableUtils.createTable(cs, dao.getDataClass());
     }
 }
