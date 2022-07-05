@@ -14,7 +14,7 @@ plugins {
 }
 
 group 'cl.ucn.disc.pdis'
-version '0.0.1'
+version '0.0.4'
 sourceCompatibility = '17'
 targetCompatibility = '17'
 
@@ -49,10 +49,10 @@ dependencies {
     implementation 'com.j256.ormlite:ormlite-jdbc:6.1'
 
     // Database
-    implementation 'com.h2database:h2:2.1.210'
+    implementation 'com.h2database:h2:2.1.212'
     implementation 'org.xerial:sqlite-jdbc:3.36.0.3'
-    implementation 'org.postgresql:postgresql:42.3.4'
-    implementation 'mysql:mysql-connector-java:8.0.28'
+    implementation 'org.postgresql:postgresql:42.3.6'
+    implementation 'mysql:mysql-connector-java:8.0.29'
 
     // Logger
     implementation 'org.slf4j:slf4j-api:1.7.36'
@@ -64,23 +64,30 @@ dependencies {
     implementation 'org.apache.commons:commons-lang3:3.12.0'
 
     // gRPC
-    runtimeOnly 'io.grpc:grpc-netty-shaded:1.45.1'
-    implementation 'io.grpc:grpc-protobuf:1.45.1'
-    implementation 'io.grpc:grpc-stub:1.45.1'
+    runtimeOnly 'io.grpc:grpc-netty-shaded:1.47.0'
+    implementation 'io.grpc:grpc-protobuf:1.47.0'
+    implementation 'io.grpc:grpc-stub:1.47.0'
     compileOnly 'org.apache.tomcat:annotations-api:6.0.53'
 
+    testImplementation 'io.grpc:grpc-testing:1.47.0'
+    testImplementation 'com.asarkar.grpc:grpc-test:1.2.1'
+
     // Crypto Library
-    implementation 'org.springframework.security:spring-security-crypto:5.6.3'
+    implementation 'org.springframework.security:spring-security-crypto:5.7.1'
     runtimeOnly 'org.bouncycastle:bcprov-jdk15on:1.70'
-    runtimeOnly 'org.springframework:spring-jcl:5.3.19'
+    runtimeOnly 'org.springframework:spring-jcl:5.3.20'
 }
 protobuf {
     protoc {
-        artifact = 'com.google.protobuf:protoc:3.20.0'
+        artifact = 'com.google.protobuf:protoc:3.21.2'
+    }
+    generatedFilesBaseDir = "$projectDir/src/generated"
+    clean {
+        delete generatedFilesBaseDir
     }
     plugins {
         grpc {
-            artifact = 'io.grpc:protoc-gen-grpc-java:1.45.1'
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.47.0'
         }
     }
 
@@ -96,6 +103,8 @@ sourceSets {
         java {
             srcDirs 'build/generated/source/proto/main/grpc'
             srcDirs 'build/generated/source/proto/main/java'
+            generatedSrcDirs 'build/generated/source/proto/main/grpc'
+            generatedSrcDirs 'build/generated/source/proto/main/java'
         }
     }
 }
