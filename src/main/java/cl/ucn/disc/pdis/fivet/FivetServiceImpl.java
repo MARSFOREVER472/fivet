@@ -126,60 +126,49 @@ public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
      * @param responseObserver to use.
      */
     public void searchFichaMedica(SearchFichaMedicaReq request, StreamObserver<FichaMedicaReply> responseObserver) {
-        String metadata = request.getQuery();
-
-        if (metadata.isEmpty()) {
-            responseObserver.onError(buildException(Code.INVALID_ARGUMENT, "Invalid Argument"));
-        } else {
-            // 1. By number of fichaMedica
-
-            if (isNumeric(metadata)) {
-                Optional<FichaMedica> optionalFichaMedica =
-                        this.fivetController.retrieveFichaMedica(Integer.parseInt(metadata));
-
-                optionalFichaMedica.ifPresentOrElse(fichaMedica -> {
-                    responseObserver.onNext(FichaMedicaReply.newBuilder()
-                            .setFichaMedica(ModelAdapter.build(fichaMedica))
-                            .build());
-                    responseObserver.onCompleted();
-                }, () -> responseObserver.onError(buildException(Code.NOT_FOUND, "FichaMedica not found")));
-            } else {
-
-                int count = 0;
-                List<FichaMedica> fichaMedicaList = this.fivetController.retrieveAllFichaMedica();
-
-                for (FichaMedica fichaMedica : fichaMedicaList) {
-
-                    // 2. By rut of Duenio
-
-                    if (metadata.equalsIgnoreCase(fichaMedica.getDuenio().getRut())) {
-                        count++;
-                        responseObserver.onNext(FichaMedicaReply.newBuilder()
-                                .setFichaMedica(ModelAdapter.build(fichaMedica))
-                                .build());
-
-                        // 3. By nombre Mascota
-                    } else if (metadata.equalsIgnoreCase(fichaMedica.getNombrePaciente())) {
-                        count++;
-                        responseObserver.onNext(FichaMedicaReply.newBuilder()
-                                .setFichaMedica(ModelAdapter.build(fichaMedica))
-                                .build());
-
-                        // 4. By nombre Duenio
-                    } else if (metadata.equalsIgnoreCase(fichaMedica.getDuenio().getNombre())) {
-                        count++;
-                        responseObserver.onNext(FichaMedicaReply.newBuilder()
-                                .setFichaMedica(ModelAdapter.build(fichaMedica))
-                                .build());
-                    }
-                }
-
-                if (count > 0) {
-                    responseObserver.onCompleted();
-                } else {
-                    responseObserver.onError(buildException(Code.NOT_FOUND, "FichaMedica not found"));
-                }
+        Collection<FichaMedica> fichasMedicasEncontradas = new ArrayList<>();
+        Collection<FichaMedica> fichasMedicasBD = this.fivetController.getAllFichaMedica();
+        // Busqueda si el query contiene numeros
+        if (NumberUtils.isCreatable(request.getQuery())) {
+            // Busqueda por numero de ficha
+            Optional<FichaMedica> fichaMedicaNumero = this.fivetController.getFichaMedica(Integer.valueOf(request.getQuery()));
+            if (fichaMedicaNumero.isPresent()) {
+                fichasMedicasEncontradas.add(fichaMedicaNumero.get());
             }
+            // Busqueda por coincidencias en el rut
+            Collection<FichaMedica> fichasMedicasRut = this.fivetController.searchFichaMedica
+                    (request.getQuery(), fichasMedicasBD, 1);
+            fichasMedicasEncontradas.addAll(fichasMedicasRut);
+        }
+        // Busqueda si el query tiene letras o simbolos
+        else {
+            // Busqueda por coincidencias en el rut
+            Collection<FichaMedica> fichasMedicasRut = this.fivetController.searchFichaMedica
+                    (request.getQuery(), fichasMedicasBD, 1);
+            fichasMedicasEncontradas.addAll(fichasMedicasRut);
+
+            // Busqueda por nombre del paciente
+            Collection<FichaMedica> fichasMedicasNomPaciente = this.fivetController.searchFichaMedica
+                    (request.getQuery(), fichasMedicasBD, 2);
+            fichasMedicasEncontradas.addAll(fichasMedicasNomPaciente);
+
+            // Busqueda por nombre del dueño
+            Collection<FichaMedica> fichasMedicasNomDuenio = this.fivetController.searchFichaMedica
+                    (request.getQuery(), fichasMedicasBD, 3);
+            fichasMedicasEncontradas.addAll(fichasMedicasNomDuenio);
+        }
+
+        // TODO hacer que no se repitan las fichas obtenidas o algo asi
+
+        if (fichasMedicasEncontradas.size() < 1) {
+            for (FichaMedica fichaMedica : fichasMedicasEncontradas) {
+                responseObserver.onNext(FichaMedicaReply.newBuilder().setFichaMedica(ModelAdapter.build(fichaMedica))
+                        .build());
+            }
+            responseObserver.onCompleted();
+        }
+        else {
+            //responseObserver.onError(buildException(Code.PERMISSION_DENIED, "Wrong number"));
         }
     }
 
