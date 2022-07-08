@@ -24,7 +24,10 @@
 package cl.ucn.disc.pdis.fivet.orm;
 
 import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.time.ZonedDateTime;
 
@@ -34,13 +37,16 @@ import java.time.ZonedDateTime;
  * @author Marcelo Lam
  *
  */
+@NoArgsConstructor
+@AllArgsConstructor
+@DatabaseTable
 public abstract class BaseEntity {
 
     /**
      *  The id.
      */
-    @Getter  // lombok agrega el get automaticamente
-    @DatabaseField(generatedId = true) // Para la ORM todas las clases que den de esta tendran una id, y esa id lo genera (orm)
+    @Getter  // lombok adds a get
+    @DatabaseField(generatedId = true) // Generates id to return in this class.
     protected Integer id;
 
     /**
