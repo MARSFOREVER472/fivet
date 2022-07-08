@@ -62,6 +62,20 @@ public final class ModelAdapter {
     }
 
     /**
+     * Persona gRPC to Persona java.
+     * @param persona PersonaEntity.
+     * @return a persona java.
+     */
+    public static Persona build(final PersonaEntity persona) {
+        return Persona.builder()
+                .nombre(persona.getNombre())
+                .email(persona.getEmail())
+                .rut(persona.getRut())
+                .direccion(persona.getDireccion())
+                .build();
+    }
+
+    /**
      * FichaMedica java to FichaMedica gRPC.
      * @param fichaMedica FichaMedica java
      * @return a FichaMedicaEntity.
