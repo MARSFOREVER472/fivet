@@ -23,7 +23,8 @@
 
 package cl.ucn.disc.pdis.fivet;
 
-import cl.ucn.disc.pdis.fivet.grpc.AuthenticationReq;
+
+import cl.ucn.disc.pdis.fivet.grpc.AuthenticateReq;
 import cl.ucn.disc.pdis.fivet.grpc.FivetServiceGrpc;
 import cl.ucn.disc.pdis.fivet.grpc.PersonaReply;
 import com.asarkar.grpc.test.GrpcCleanupExtension;
@@ -35,8 +36,8 @@ import io.grpc.inprocess.InProcessChannelBuilder;
 import io.grpc.inprocess.InProcessServerBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.test;
-import org.junit.jupiter.api.extension.Extension;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -81,33 +82,33 @@ public final class TestGrpc {
         {
             // Empty
             Assertions.assertThrows(StatusRuntimeException.class, () -> {
-                PersonaReply personaReply = stub.authenticate(AuthenticationReq.newBuilder()
+                PersonaReply personaReply = stub.authenticate(AuthenticateReq.newBuilder()
                         .build());
             });
 
             // No password
             Assertions.assertThrows(StatusRuntimeException.class, () -> {
-                PersonaReply personaReply = stub.authenticate(AuthenticationReq.newBuilder()
+                PersonaReply personaReply = stub.authenticate(AuthenticateReq.newBuilder()
                         .setLogin("admin@ucn.cl")
                         .build());
             });
 
             // Wrong password
             Assertions.assertThrows(StatusRuntimeException.class, () -> {
-                PersonaReply personaReply = stub.authenticate(AuthenticationReq.newBuilder()
+                PersonaReply personaReply = stub.authenticate(AuthenticateReq.newBuilder()
                         .setLogin("admin@ucn.cl")
                         .setPassword("wrong password").build());
             });
 
             // Wrong login
             Assertions.assertThrows(StatusRuntimeException.class, () -> {
-                PersonaReply personaReply = stub.authenticate(AuthenticationReq.newBuilder()
+                PersonaReply personaReply = stub.authenticate(AuthenticateReq.newBuilder()
                         .setLogin("unknow@ucn.cl")
                         .setPassword("admin123")
                         .build());
             });
 
-            PersonaReply personaReply = stub.authenticate(AuthenticationReq.newBuilder()
+            PersonaReply personaReply = stub.authenticate(AuthenticateReq.newBuilder()
                     .setLogin("admin@ucn.cl")
                     .setPassword("admin123").build());
 

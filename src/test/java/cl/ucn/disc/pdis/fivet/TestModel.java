@@ -32,6 +32,8 @@ import com.j256.ormlite.support.ConnectionSource;
 import lombok.Cleanup;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
@@ -119,7 +121,7 @@ public class TestModel {
 
         // Retrieve a FichaMedica
         {
-            FichaMedica fichaMedica = daoFichaMedica.get(1).orElseThrow();
+            FichaMedica fichaMedica = fichaMedicaDAO.get(1).orElseThrow();
             print("FichaMedica", fichaMedica);
             print("Duenio", fichaMedica.getDuenio());
             Assertions.assertNotNull(fichaMedica.getDuenio(), "Duenio was null");
@@ -127,11 +129,11 @@ public class TestModel {
             // Create a control
             {
                 Control control = Control.builder()
-                        .altura(0.4)
+                        .altura(0.4f)
                         .diagnostico("Sin novedad")
                         .fecha(ZonedDateTime.now())
-                        .peso(5.2)
-                        .temperatura(35.7)
+                        .peso(5.2f)
+                        .temperatura(35.7f)
                         // .fichaMedica(fichaMedica)
                         .veterinario(fichaMedica.getDuenio())
                         .build();
@@ -141,7 +143,7 @@ public class TestModel {
 
         // Retrieve a FichaMedica with Control
         {
-            FichaMedica fichaMedica = daoFichaMedica.get(1).orElseThrow();
+            FichaMedica fichaMedica = fichaMedicaDAO.get(1).orElseThrow();
             print("FichaMedica", fichaMedica);
             Assertions.assertNotNull(fichaMedica.getControles(), "Controles was null");
             Assertions.assertEquals(1, fichaMedica.getControles().size(), "Controles !=1");

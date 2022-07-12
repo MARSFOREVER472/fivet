@@ -89,7 +89,7 @@ public final class TestFivetController {
                     .telefonoMovil("912345678")
                     .telefonoFijo("2233441")
                     .build();
-            fivetController.add(persona, "soyunacontraseña");
+            fivetController.addPersona(persona, "soyunacontraseña");
             log.debug("To db: {}", ToStringBuilder.reflectionToString(persona, ToStringStyle.MULTI_LINE_STYLE));
         }
 

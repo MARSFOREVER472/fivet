@@ -98,7 +98,7 @@ protobuf {
     }
 }
 
-sourceSets {
+/* sourceSets {
     main {
         java {
             srcDirs 'build/generated/source/proto/main/grpc'
@@ -107,7 +107,7 @@ sourceSets {
             generatedSrcDirs 'build/generated/source/proto/main/java'
         }
     }
-}
+} */
 
 test {
     useJUnitPlatform()

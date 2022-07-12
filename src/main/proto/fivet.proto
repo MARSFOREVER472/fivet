@@ -34,6 +34,7 @@ message ControlEntity {
   float altura = 4;
   string diagnostico = 5;
   PersonaEntity veterinario = 6;
+  FichaMedicaEntity fichaMedica = 7;
 }
 
 enum SexoEntity {
@@ -50,11 +51,11 @@ message AddFichaReq {
   FichaMedicaEntity fichaMedica = 1;
 }
 
-message RetrieveFichaMedicaRequest {
+message RetrieveFichaMedicaReq {
   int32 numeroFicha = 1;
 }
 
-message SearchFichaMedicaRequest {
+message SearchFichaMedicaReq {
   string query = 1;
 }
 
@@ -85,9 +86,9 @@ service FivetService {
 
   rpc addControl(AddControlReq) returns(FichaMedicaReply) {}
 
-  rpc retrieveFicha(RetrieveFichaMedicaRequest) returns(FichaMedicaReply) {}
+  rpc retrieveFicha(RetrieveFichaMedicaReq) returns(FichaMedicaReply) {}
 
-  rpc searchFicha(SearchFichaMedicaRequest) returns (stream FichaMedicaEntity) {}
+  rpc searchFicha(SearchFichaMedicaReq) returns (stream FichaMedicaEntity) {}
 
   rpc addFicha(AddFichaReq) returns(FichaMedicaReply) {}
 

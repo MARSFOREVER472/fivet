@@ -21,17 +21,21 @@
  *
  */
 
-package cl.ucn.disc.pdis.fivet.services;
+package cl.ucn.disc.pdis.fivet;
 
 import cl.ucn.disc.pdis.fivet.grpc.*;
 import cl.ucn.disc.pdis.fivet.model.Control;
 import cl.ucn.disc.pdis.fivet.model.FichaMedica;
+import cl.ucn.disc.pdis.fivet.model.ModelAdapter;
 import cl.ucn.disc.pdis.fivet.model.Persona;
+import cl.ucn.disc.pdis.fivet.services.FivetController;
+import cl.ucn.disc.pdis.fivet.services.FivetControllerImpl;
 import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.math.NumberUtils;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Optional;
 
@@ -45,10 +49,9 @@ public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
 
     /**
      * @param databaseUrl to use.
-     * @throws SQLException.
      */
-    public FivetServiceImpl(String databaseUrl) throws SQLException {
-        this.fivetController = new FivetControllerImpl(databaseUrl, true);
+    public FivetServiceImpl(String databaseUrl) {
+        this.fivetController = new FivetControllerImpl(databaseUrl);
     }
 
     /**
@@ -56,10 +59,10 @@ public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
      * @param request to use, contains a login and password.
      * @param responseObserver to use.
      */
-    public void autenticate(AutenticateReq request, StreamObserver<PersonaReply> responseObserver) {
+    public void autenticate(AuthenticateReq request, StreamObserver<PersonaReply> responseObserver) {
         // Retrieve from Controller
         Optional<Persona> persona = this.fivetController
-                .retrieveLogin(request
+                .retrieveByLogin(request
                         .getLogin());
         if (persona.isPresent()) {
             // Return the observer
@@ -177,7 +180,7 @@ public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
      * @param request to use, contains a Control.
      * @param responseObserver to use.
      */
-    public void addFicha(AddFichaMedicaReq request, StreamObserver<FichaMedicaReply> responseObserver) {
+    public void addFicha(AddFichaReq request, StreamObserver<FichaMedicaReply> responseObserver) {
         FichaMedica fichaMedica = ModelAdapter.build(request.getFichaMedica());
         this.fivetController.addFichaMedica(fichaMedica);
         responseObserver.onNext(FichaMedicaReply.newBuilder().setFichaMedica(request.getFichaMedica()).build());

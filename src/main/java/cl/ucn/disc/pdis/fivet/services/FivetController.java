@@ -27,6 +27,7 @@ import cl.ucn.disc.pdis.fivet.model.Persona;
 import cl.ucn.disc.pdis.fivet.model.Control;
 import cl.ucn.disc.pdis.fivet.model.FichaMedica;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -54,7 +55,7 @@ public interface FivetController {
      * @param persona to add.
      * @param password to hash.
      */
-    void add(Persona persona, String password);
+    void addPersona(Persona persona, String password);
 
     // Ficha
 

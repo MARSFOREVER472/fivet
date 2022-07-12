@@ -24,20 +24,25 @@
 package cl.ucn.disc.pdis.fivet.services;
 
 import cl.ucn.disc.pdis.fivet.model.Control;
+import cl.ucn.disc.pdis.fivet.model.Examen;
 import cl.ucn.disc.pdis.fivet.model.FichaMedica;
 import cl.ucn.disc.pdis.fivet.model.Persona;
 import cl.ucn.disc.pdis.fivet.orm.DAO;
 import cl.ucn.disc.pdis.fivet.orm.ORMLiteDAO;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
+import com.j256.ormlite.table.TableUtils;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.swing.text.html.Option;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -65,7 +70,7 @@ public class FivetControllerImpl implements FivetController {
      * @param dbUrl to connect
      */
     @SneakyThrows
-    public FivetControllerImpl(String dbUrl, boolean b) throws SQLException {
+    public FivetControllerImpl(String dbUrl) {
 
         ConnectionSource cs = new JdbcConnectionSource(dbUrl);
         this.daoPersona = new ORMLiteDAO<>(cs,Persona.class);
@@ -137,7 +142,7 @@ public class FivetControllerImpl implements FivetController {
      * @param password to hash.
      */
     @Override
-    public void add(Persona persona, String password) {
+    public void addPersona(Persona persona, String password) {
         persona.setPassword(BCrypt.hashpw(password,
                 BCrypt.gensalt(12)));
         this.daoPersona.save(persona);

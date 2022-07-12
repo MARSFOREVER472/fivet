@@ -58,11 +58,12 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
     /**
      * The Constructor of ORMLiteDAO
      * @param cs        the connection to the database.
-     * @param clazz     the type of T.
+     * @param theClass     the type of T.
      */
     @SneakyThrows(SQLException.class)
-    public ORMLiteDAO(@NonNull final ConnectionSource cs, @NonNull final Class<T> clazz){
-        this.theDao = DaoManager.createDao(cs,clazz);
+    public ORMLiteDAO(@NonNull final ConnectionSource cs, @NonNull final Class<T> theClass){
+        this.theDao = DaoManager.createDao(cs,theClass);
+        ORMLiteDAO.cs = cs;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
     @SneakyThrows
     @Override
     public Optional<T> get(String attrib, Object value) {
-        List<T> list = this.dao.queryForEq(attrib, value);
+        List<T> list = this.theDao.queryForEq(attrib, value);
 
         for (T t : list)
             if (t.getDeletedAt() == null) {
@@ -132,26 +133,6 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
             }
         }
         return list;
-    }
-
-    /**
-     * Get optional T by some attribute.
-     *
-     * @param attribute to filter.
-     * @param value     of attribute.
-     * @return the optional T.
-     */
-    @SneakyThrows
-    @Override
-    public Optional<T> get(String attribute, Object value) {
-        // Retrieve from database
-        List<T> filtered = this.removeDeleted(this.theDao.queryForEq(attribute, value));
-
-        // Show a warning
-        if (filtered.size() > 1) {
-            log.warn("Founded more than one value in {} for {}", value, attribute);
-        }
-        return filtered.isEmpty() ? Optional.empty() : Optional.of(filtered.get(0));
     }
 
     /**
@@ -227,7 +208,7 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
     @Override
     @SneakyThrows
     public void dropAndCreateTable() {
-        TableUtils.dropTable(cs, dao.getDataClass(), true);
-        TableUtils.createTable(cs, dao.getDataClass());
+        TableUtils.dropTable(cs, theDao.getDataClass(), true);
+        TableUtils.createTable(cs, theDao.getDataClass());
     }
 }

@@ -62,7 +62,7 @@ public class FivetServer {
         }
 
         @Override
-        public void autenticar(AuthenticateReq request, StreamObserver<cl.ucn.disc.pdis.fivet.grpc.PersonaReply> responseObserver) {
+        public void authenticate(AuthenticateReq request, StreamObserver<cl.ucn.disc.pdis.fivet.grpc.PersonaReply> responseObserver) {
             Optional<cl.ucn.disc.pdis.fivet.model.Persona>  persona = this.fivetController.retrieveByLogin(request.getLogin());
             if (persona.isPresent()) {
                 PersonaEntity personaEntity = PersonaEntity.newBuilder()

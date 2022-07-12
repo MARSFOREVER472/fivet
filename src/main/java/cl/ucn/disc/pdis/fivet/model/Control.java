@@ -26,10 +26,7 @@ package cl.ucn.disc.pdis.fivet.model;
 import cl.ucn.disc.pdis.fivet.orm.BaseEntity;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.ZonedDateTime;
 
@@ -48,6 +45,7 @@ public class Control extends BaseEntity {
      * The fecha of the control carried out.
      */
     @Getter
+    @Setter
     @DatabaseField(canBeNull = false)
     private ZonedDateTime fecha;
 
@@ -55,6 +53,7 @@ public class Control extends BaseEntity {
      * The patient of the temperature in the control.
      */
     @Getter
+    @Setter
     @DatabaseField(canBeNull = false)
     private Float temperatura;
 
@@ -62,6 +61,7 @@ public class Control extends BaseEntity {
      * The weight of the patient in the control.
      */
     @Getter
+    @Setter
     @DatabaseField(canBeNull = false)
     private Float peso;
 
@@ -69,6 +69,7 @@ public class Control extends BaseEntity {
      * The height of the patient in the control.
      */
     @Getter
+    @Setter
     @DatabaseField(canBeNull = false)
     private Float altura;
 
@@ -76,6 +77,7 @@ public class Control extends BaseEntity {
      * The patient's diagnostic.
      */
     @Getter
+    @Setter
     @DatabaseField(canBeNull = false)
     private String diagnostico;
 
@@ -83,6 +85,7 @@ public class Control extends BaseEntity {
      * The vet's name.
      */
     @Getter
+    @Setter
     @DatabaseField(foreign = true, foreignAutoRefresh = true, columnName = "veterinario_id", canBeNull = false)
     private Persona veterinario;
 
@@ -90,6 +93,7 @@ public class Control extends BaseEntity {
      * The Medical Record.
      */
     @Getter
+    @Setter
     @DatabaseField(foreign = true, foreignAutoRefresh = true, columnName = "fichamedica_id")
     private FichaMedica fichaMedica;
 }

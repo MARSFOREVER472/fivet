@@ -27,10 +27,7 @@ import cl.ucn.disc.pdis.fivet.orm.BaseEntity;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.field.ForeignCollectionField;
 import com.j256.ormlite.table.DatabaseTable;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.ZonedDateTime;
 import java.util.Collection;
@@ -50,6 +47,7 @@ public final class FichaMedica extends BaseEntity {
      * The number of the record card.
      */
     @Getter
+    @Setter
     @DatabaseField(canBeNull = false, unique = true)
     private Integer numeroFicha;
 
@@ -57,6 +55,7 @@ public final class FichaMedica extends BaseEntity {
      * The patient's name.
      */
     @Getter
+    @Setter
     @DatabaseField(canBeNull = false)
     private String nombrePaciente;
 
@@ -64,6 +63,7 @@ public final class FichaMedica extends BaseEntity {
      * The specie of the patient.
      */
     @Getter
+    @Setter
     @DatabaseField(canBeNull = false)
     private String especie;
 
@@ -71,6 +71,7 @@ public final class FichaMedica extends BaseEntity {
      * The date of birth of the patient.
      */
     @Getter
+    @Setter
     @DatabaseField(canBeNull = false)
     private ZonedDateTime fechaNacimiento;
 
@@ -78,6 +79,7 @@ public final class FichaMedica extends BaseEntity {
      * The race of the patient.
      */
     @Getter
+    @Setter
     @DatabaseField(canBeNull = false)
     private String raza;
 
@@ -85,13 +87,15 @@ public final class FichaMedica extends BaseEntity {
      * The sexo of the patient.
      */
     @Getter
+    @Setter
     @DatabaseField(canBeNull = false)
-    private Character sexo;
+    private Sexo sexo;
 
     /**
      * The color of the patient.
      */
     @Getter
+    @Setter
     @DatabaseField(canBeNull = false)
     private String color;
 
@@ -99,6 +103,7 @@ public final class FichaMedica extends BaseEntity {
      * The type of animal.
      */
     @Getter
+    @Setter
     @DatabaseField(canBeNull = false)
     private String tipo;
 
@@ -106,6 +111,7 @@ public final class FichaMedica extends BaseEntity {
      * The Owner.
      */
     @Getter
+    @Setter
     @DatabaseField(foreign = true, foreignAutoRefresh = true, columnName = "persona_id")
     private Persona duenio;
 
@@ -113,6 +119,7 @@ public final class FichaMedica extends BaseEntity {
      * The Controls.
      */
     @Getter
+    @Setter
     @ForeignCollectionField(eager = true, orderColumnName = "fecha")
     private Collection<Control> controles;
 

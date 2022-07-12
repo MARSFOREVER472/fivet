@@ -21,7 +21,7 @@
  *
  */
 
-package cl.ucn.disc.pdis.fivet.services;
+package cl.ucn.disc.pdis.fivet.model;
 
 import cl.ucn.disc.pdis.fivet.grpc.ControlEntity;
 import cl.ucn.disc.pdis.fivet.grpc.FichaMedicaEntity;
@@ -83,9 +83,9 @@ public final class ModelAdapter {
     public static FichaMedicaEntity build(final FichaMedica fichaMedica) {
         return FichaMedicaEntity.newBuilder()
                 .setColor(fichaMedica.getColor())
-                .setDuenio(fichaMedica.getDuenio())
+                .setDuenio(build(fichaMedica.getDuenio()))
                 .setEspecie(fichaMedica.getEspecie())
-                .setFechaNacimiento(String.valueOf(fichaMedica.getNacimiento()))
+                .setFechaNacimiento(String.valueOf(fichaMedica.getFechaNacimiento()))
                 .setNombrePaciente(fichaMedica.getNombrePaciente())
                 .setNumeroFicha(fichaMedica.getNumeroFicha())
                 .setRaza(fichaMedica.getRaza())
@@ -105,7 +105,7 @@ public final class ModelAdapter {
                 .color(fichaMedica.getColor())
                 .duenio(build(fichaMedica.getDuenio()))
                 .especie(fichaMedica.getEspecie())
-                .fechaNacimiento(LocalDate.parse(fichaMedica.getFechaNacimiento()))
+                .fechaNacimiento(ZonedDateTime.parse(fichaMedica.getFechaNacimiento()))
                 .nombrePaciente(fichaMedica.getNombrePaciente())
                 .numeroFicha(fichaMedica.getNumeroFicha())
                 .raza(fichaMedica.getRaza())
@@ -139,12 +139,12 @@ public final class ModelAdapter {
      */
     public static Control build(final ControlEntity control) {
         return Control.builder()
-                .altura(Double.valueOf(control.getAltura()))
+                .altura(control.getAltura())
                 .diagnostico(control.getDiagnostico())
                 .fecha(build(control.getFecha()))
                 .fichaMedica(build(control.getFichaMedica()))
-                .peso(Double.valueOf(control.getPeso()))
-                .temperatura(Double.valueOf(control.getTemperatura()))
+                .peso(control.getPeso())
+                .temperatura(control.getTemperatura())
                 .veterinario(build(control.getVeterinario()))
                 .build();
     }
