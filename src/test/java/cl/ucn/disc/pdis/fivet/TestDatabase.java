@@ -24,6 +24,8 @@
 package cl.ucn.disc.pdis.fivet;
 
 import cl.ucn.disc.pdis.fivet.model.Persona;
+import cl.ucn.disc.pdis.fivet.orm.DAO;
+import cl.ucn.disc.pdis.fivet.orm.ORMLiteDAO;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
@@ -31,6 +33,7 @@ import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 
 
 /**
@@ -47,15 +50,23 @@ public class TestDatabase {
     public void testDatabase() {
         String databaseUrl = "jdbc:h2:mem:fivet_db";
         try (ConnectionSource connectionSource = new JdbcConnectionSource(databaseUrl)) {
-            TableUtils.createTableIfNotExists(connectionSource, Persona.class);
+
             // Create dao.
-            Dao<Persona, Integer> daoPersona = DaoManager.createDao(connectionSource, Persona.class);
+            DAO<Persona> daoPersona = new ORMLiteDAO<>(connectionSource, Persona.class);
+            daoPersona.dropAndCreateTable();
 
             Persona persona = new Persona();
-            int row = daoPersona.create(persona);
-            Assertions.assertEquals(1, row);
+            persona.setNombre("admin");
+            persona.setDireccion("angamos 0610");
+            persona.setTelefonoFijo("12345678");
+            persona.setTelefonoMovil("56979628796");
+            persona.setEmail("admin@ucn.cl");
+            persona.setRut("815184009");
+            persona.setPassword(BCrypt.hashpw("admin123",
+                    BCrypt.gensalt(12)));
+            daoPersona.save(persona);
 
-            Persona personaFromDb = daoPersona.queryForId(persona.getId());
+            Persona personaFromDb = daoPersona.get(persona.getId()).get();
             Assertions.assertEquals(persona.getNombre(), personaFromDb.getNombre());
         } catch (Exception e) {
             throw new RuntimeException(e);

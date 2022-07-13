@@ -23,9 +23,9 @@
 
 package cl.ucn.disc.pdis.fivet.services;
 
-import cl.ucn.disc.pdis.fivet.model.Persona;
 import cl.ucn.disc.pdis.fivet.model.Control;
 import cl.ucn.disc.pdis.fivet.model.FichaMedica;
+import cl.ucn.disc.pdis.fivet.model.Persona;
 
 import java.util.Collection;
 import java.util.List;
@@ -84,8 +84,8 @@ public interface FivetController {
      * @param attribute to use.
      * @return list of FichaMedica.
      */
-    Collection<FichaMedica> searchFichaMedica(String q, Collection<FichaMedica> fichasMedicasDB
-            , Integer attribute);
+    Collection<FichaMedica> searchFichaMedica(String q, Collection<FichaMedica>
+            fichasMedicasDB, Integer attribute);
 
     /**
      * Delete a persona by id.

@@ -52,14 +52,14 @@ public interface DAO<T extends BaseEntity> {
      *
      * @param t to save
      */
-    void save (T t);
+    void save(T t);
 
     /**
      * Delete a T
      *
      * @param t to delete
      */
-    void delete (T t);
+    void delete(T t);
 
     /**
      * Delete a T with id

@@ -30,6 +30,12 @@ import cl.ucn.disc.pdis.fivet.model.ModelAdapter;
 import cl.ucn.disc.pdis.fivet.model.Persona;
 import cl.ucn.disc.pdis.fivet.services.FivetController;
 import cl.ucn.disc.pdis.fivet.services.FivetControllerImpl;
+import com.google.protobuf.Any;
+import com.google.rpc.Code;
+import com.google.rpc.ErrorInfo;
+import com.google.rpc.Status;
+import io.grpc.StatusRuntimeException;
+import io.grpc.protobuf.StatusProto;
 import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.math.NumberUtils;
@@ -53,17 +59,26 @@ public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
     public FivetServiceImpl(String databaseUrl) {
         this.fivetController = new FivetControllerImpl(databaseUrl);
     }
+    private static StatusRuntimeException buildException(final Code code, final String message) {
+        return StatusProto.toStatusRuntimeException(Status.newBuilder()
+                .setCode(code.getNumber())
+                .setMessage(message)
+                .addDetails(Any.pack(ErrorInfo.newBuilder()
+                        .setReason(message)
+                        .build()))
+                .build());
+    }
 
     /**
      * authenticate
      * @param request to use, contains a login and password.
      * @param responseObserver to use.
      */
-    public void autenticate(AuthenticateReq request, StreamObserver<PersonaReply> responseObserver) {
+    public void authenticate(AuthenticateReq request, StreamObserver<PersonaReply> responseObserver) {
         // Retrieve from Controller
         Optional<Persona> persona = this.fivetController
-                .retrieveByLogin(request
-                        .getLogin());
+                .autenticar(request
+                        .getLogin(), request.getPassword());
         if (persona.isPresent()) {
             // Return the observer
             responseObserver.onNext(PersonaReply.newBuilder()
@@ -71,16 +86,8 @@ public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
                     .build());
             responseObserver.onCompleted();
         } else {
-            responseObserver.onNext(PersonaReply.newBuilder()
-                    .setPersona(PersonaEntity.newBuilder()
-                            .setNombre("Marcelo")
-                            .setRut("197105992")
-                            .setEmail("marcelo.lam@alumnos.ucn.cl")
-                            .setDireccion("angamos 0610")
-                            .build())
-                    .build());
-            responseObserver.onCompleted();
-            //responseObserver.onError(buildException(Code.PERMISSION_DENIED, "Wrong Credentials"));
+
+            responseObserver.onError(buildException(Code.PERMISSION_DENIED, "Wrong Credentials"));
         }
     }
 
@@ -109,7 +116,7 @@ public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
      * @param request to use, contains a NumeroFicha.
      * @param responseObserver to use.
      */
-    public void retrieveFichaMedica(RetrieveFichaMedicaReq request,
+    public void retrieveFicha(RetrieveFichaMedicaReq request,
                                     StreamObserver<FichaMedicaReply> responseObserver) {
         Optional<FichaMedica> fichaMedica = this.fivetController.getFichaMedica(request
                 .getNumeroFicha());

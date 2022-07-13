@@ -73,7 +73,7 @@ public class FivetControllerImpl implements FivetController {
     public FivetControllerImpl(String dbUrl) {
 
         ConnectionSource cs = new JdbcConnectionSource(dbUrl);
-        this.daoPersona = new ORMLiteDAO<>(cs,Persona.class);
+        this.daoPersona = new ORMLiteDAO<>(cs, Persona.class);
         this.daoFichaMedica = new ORMLiteDAO<>(cs, FichaMedica.class);
 
         // Create the table from Persona annotations
@@ -88,6 +88,17 @@ public class FivetControllerImpl implements FivetController {
         // Create the table from Persona annotations
         TableUtils.createTableIfNotExists(cs, Examen.class);
 
+        Persona admin = new Persona();
+        admin.setNombre("admin");
+        admin.setDireccion("angamos 0610");
+        admin.setTelefonoFijo("12345678");
+        admin.setTelefonoMovil("56979628796");
+        admin.setEmail("admin@ucn.cl");
+        admin.setRut("815184009");
+        admin.setPassword(BCrypt.hashpw("admin123",
+                BCrypt.gensalt(12)));
+        daoPersona.save(admin);
+
     }
 
     /**
@@ -99,7 +110,7 @@ public class FivetControllerImpl implements FivetController {
     @Override
     public Optional<Persona> retrieveByLogin(String login) {
         var persona = this.daoPersona.get("rut", login);
-        if(persona.isPresent()) {
+        if (persona.isPresent()) {
             return persona;
         }
         return this.daoPersona.get("email", login);
@@ -200,8 +211,8 @@ public class FivetControllerImpl implements FivetController {
      * @return list of FichaMedica.
      */
     @Override
-    public Collection<FichaMedica> searchFichaMedica(String q, Collection<FichaMedica> fichasMedicasDB
-            , Integer attribute) {
+    public Collection<FichaMedica> searchFichaMedica(String q, Collection<FichaMedica>
+            fichasMedicasDB, Integer attribute) {
         Collection<FichaMedica> fichasMedicas = new ArrayList<>();
         if (attribute == 1) {
             for (FichaMedica fichaMedica : fichasMedicasDB) {

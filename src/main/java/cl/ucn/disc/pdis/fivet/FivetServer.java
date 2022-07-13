@@ -57,13 +57,15 @@ public class FivetServer {
 
     private static class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
         private final FivetController fivetController;
-        public FivetServiceImpl(String databaseUrl){
+        public FivetServiceImpl(String databaseUrl) {
             this.fivetController = new FivetControllerImpl(databaseUrl);
         }
 
         @Override
-        public void authenticate(AuthenticateReq request, StreamObserver<cl.ucn.disc.pdis.fivet.grpc.PersonaReply> responseObserver) {
-            Optional<cl.ucn.disc.pdis.fivet.model.Persona>  persona = this.fivetController.retrieveByLogin(request.getLogin());
+        public void authenticate(AuthenticateReq request,
+                                 StreamObserver<cl.ucn.disc.pdis.fivet.grpc.PersonaReply> responseObserver) {
+            Optional<cl.ucn.disc.pdis.fivet.model.Persona>  persona = this.fivetController
+                    .retrieveByLogin(request.getLogin());
             if (persona.isPresent()) {
                 PersonaEntity personaEntity = PersonaEntity.newBuilder()
                         .setRut(persona.get().getRut())

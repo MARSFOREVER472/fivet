@@ -24,9 +24,8 @@
 package cl.ucn.disc.pdis.fivet;
 
 
-import cl.ucn.disc.pdis.fivet.grpc.AuthenticateReq;
-import cl.ucn.disc.pdis.fivet.grpc.FivetServiceGrpc;
-import cl.ucn.disc.pdis.fivet.grpc.PersonaReply;
+import cl.ucn.disc.pdis.fivet.grpc.*;
+import cl.ucn.disc.pdis.fivet.model.Persona;
 import com.asarkar.grpc.test.GrpcCleanupExtension;
 import com.asarkar.grpc.test.Resources;
 import io.grpc.ManagedChannel;
@@ -107,6 +106,8 @@ public final class TestGrpc {
                         .setPassword("admin123")
                         .build());
             });
+
+
 
             PersonaReply personaReply = stub.authenticate(AuthenticateReq.newBuilder()
                     .setLogin("admin@ucn.cl")

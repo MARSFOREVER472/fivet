@@ -26,6 +26,7 @@ package cl.ucn.disc.pdis.fivet.orm;
 import com.google.common.collect.Lists;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
+import com.j256.ormlite.field.DataPersisterManager;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
@@ -48,6 +49,10 @@ import java.util.Optional;
 @Slf4j
 public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
 
+    static {
+    DataPersisterManager.registerDataPersisters(ZonedDateTimeType.INSTANCE);
+    DataPersisterManager.registerDataPersisters(LocalDateType.INSTANCE);
+}
     /**
      * The real DAO (connection to ORMLite DAO).
      */
@@ -62,7 +67,7 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
      */
     @SneakyThrows(SQLException.class)
     public ORMLiteDAO(@NonNull final ConnectionSource cs, @NonNull final Class<T> theClass){
-        this.theDao = DaoManager.createDao(cs,theClass);
+        this.theDao = DaoManager.createDao(cs, theClass);
         ORMLiteDAO.cs = cs;
     }
 

@@ -11,7 +11,7 @@ message PersonaEntity {
   string direccion = 4;
   string telefonoFijo = 5;
   string telefonoMovil = 6;
-  // string password = 7;
+  string password = 7;
 }
 
 message FichaMedicaEntity {
