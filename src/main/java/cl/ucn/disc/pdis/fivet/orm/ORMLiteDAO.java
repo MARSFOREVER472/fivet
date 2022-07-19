@@ -44,15 +44,14 @@ import java.util.Optional;
  * The ORMLite implementation of DAO.
  *
  * @author Marcelo Lam
- *
  */
 @Slf4j
 public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
 
     static {
-    DataPersisterManager.registerDataPersisters(ZonedDateTimeType.INSTANCE);
-    DataPersisterManager.registerDataPersisters(LocalDateType.INSTANCE);
-}
+        DataPersisterManager.registerDataPersisters(ZonedDateTimeType.INSTANCE);
+        DataPersisterManager.registerDataPersisters(LocalDateType.INSTANCE);
+    }
 
     /**
      * The real DAO (connection to ORMLite DAO).
@@ -65,8 +64,8 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
     /**
      * The Constructor of ORMLiteDAO.
      *
-     * @param cs        the connection to the database.
-     * @param theClass     the type of T.
+     * @param cs       the connection to the database.
+     * @param theClass the type of T.
      */
     @SneakyThrows(SQLException.class)
     public ORMLiteDAO(@NonNull final ConnectionSource cs, @NonNull final Class<T> theClass) {
@@ -111,7 +110,7 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
      * Get optional, T.
      *
      * @param attrib the name of attribute
-     * @param value the value
+     * @param value  the value
      * @return a T
      */
     @SuppressWarnings("checkstyle:Indentation")
@@ -125,7 +124,7 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
                 return Optional.of(t);
             }
         }
-            return Optional.empty();
+        return Optional.empty();
     }
 
 
@@ -178,7 +177,6 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
         }
         this.delete(t.getId());
     }
-
 
 
     /**

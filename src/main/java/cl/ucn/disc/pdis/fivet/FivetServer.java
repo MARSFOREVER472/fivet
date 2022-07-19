@@ -24,7 +24,10 @@
 package cl.ucn.disc.pdis.fivet;
 
 
-import cl.ucn.disc.pdis.fivet.grpc.*;
+import cl.ucn.disc.pdis.fivet.grpc.AuthenticateReq;
+import cl.ucn.disc.pdis.fivet.grpc.FivetServiceGrpc;
+import cl.ucn.disc.pdis.fivet.grpc.PersonaEntity;
+import cl.ucn.disc.pdis.fivet.grpc.PersonaReply;
 import cl.ucn.disc.pdis.fivet.services.FivetController;
 import cl.ucn.disc.pdis.fivet.services.FivetControllerImpl;
 import io.grpc.Server;
@@ -70,20 +73,20 @@ public class FivetServer {
         @Override
         public void authenticate(AuthenticateReq request,
                                  StreamObserver<cl.ucn.disc.pdis.fivet.grpc.PersonaReply> responseObserver) {
-            Optional<cl.ucn.disc.pdis.fivet.model.Persona>  persona = this.fivetController
+            Optional<cl.ucn.disc.pdis.fivet.model.Persona> persona = this.fivetController
                     .retrieveByLogin(request.getLogin());
             if (persona.isPresent()) {
                 PersonaEntity personaEntity = PersonaEntity.newBuilder()
                         .setRut(persona.get().getRut())
-                                .setNombre(persona.get().getNombre())
-                                        .setEmail(persona.get().getEmail())
-                                                .setDireccion(persona.get().getDireccion())
-                                                        .setTelefonoFijo(persona.get().getTelefonoFijo())
-                                                                .setTelefonoMovil(persona.get().getTelefonoMovil())
-                                                                        .build();
+                        .setNombre(persona.get().getNombre())
+                        .setEmail(persona.get().getEmail())
+                        .setDireccion(persona.get().getDireccion())
+                        .setTelefonoFijo(persona.get().getTelefonoFijo())
+                        .setTelefonoMovil(persona.get().getTelefonoMovil())
+                        .build();
 
                 responseObserver.onNext(PersonaReply.newBuilder()
-                                .setPersona(personaEntity)
+                        .setPersona(personaEntity)
                         .build()
                 );
                 responseObserver.onCompleted();

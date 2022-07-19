@@ -52,7 +52,7 @@ public final class TestDAO {
     @SneakyThrows
     @Test
     @DisplayName("The Main Test for DAO")
-    void theMain(){
+    void theMain() {
         log.debug("Starting the MainTest...");
 
         log.debug("Registering the ZonedDateTimeType...");
@@ -145,8 +145,9 @@ public final class TestDAO {
 
             // Getting an Optional Empty
             Optional<TheEntity> t2 = dao.get(10);
-            Assertions.assertThrows(NoSuchElementException.class, () ->{
-                dao.delete(t2.get());});
+            Assertions.assertThrows(NoSuchElementException.class, () -> {
+                dao.delete(t2.get());
+            });
 
             // with delete(id)
             dao.delete(2);
@@ -154,8 +155,9 @@ public final class TestDAO {
             Optional<TheEntity> theEntity3 = dao.get(2);
             Assertions.assertFalse(theEntity3.isPresent(), "The entity with id 2 was null");
 
-            Assertions.assertThrows(NoSuchElementException.class, () ->{
-                dao.delete(dao.get(10).get().getId());});
+            Assertions.assertThrows(NoSuchElementException.class, () -> {
+                dao.delete(dao.get(10).get().getId());
+            });
         }
 
         // Retrieve...
