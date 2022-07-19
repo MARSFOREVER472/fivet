@@ -28,20 +28,31 @@ import java.util.Optional;
 
 /**
  * Data Access Object: DAO.
- * @author Marcelo Lam
+ *
+ * @author Marcelo Lam.
  * @param <T> the base entity.
  */
 public interface DAO<T extends BaseEntity> {
 
     /**
      * Get optional T.
+     *
      * @param id to search.
      * @return a T.
      */
     Optional<T> get(Integer id);
 
     /**
-     * Get all the Ts
+     * Get optional T by some attribute.
+     *
+     * @param attribute to filter.
+     * @param value     of attribute.
+     * @return the optional T
+     */
+    Optional<T> get(String attribute, Object value);
+
+    /**
+     * Get all the Ts.
      *
      * @return the List of T
      */
@@ -55,30 +66,22 @@ public interface DAO<T extends BaseEntity> {
     void save(T t);
 
     /**
-     * Delete a T
+     * Delete a T.
      *
      * @param t to delete
      */
     void delete(T t);
 
     /**
-     * Delete a T with id
+     * Delete a T with id.
      *
      * @param id of th et to delete.
      */
     void delete(Integer id);
 
     /**
-     * Drop and create a new table
+     * Drop and create a new table.
      */
     void dropAndCreateTable();
 
-    /**
-     * Get optional T by some attribute.
-     *
-     * @param attribute to filter.
-     * @param value     of attribute.
-     * @return the optional T
-     */
-    Optional<T> get(String attribute, Object value);
 }

@@ -45,6 +45,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Optional;
 
+/**
+ * The Fivet Service Impl.
+ */
 @Slf4j
 public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
 
@@ -54,11 +57,14 @@ public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
     private final FivetController fivetController;
 
     /**
+     * Fivet Service Impl Instance.
+     *
      * @param databaseUrl to use.
      */
     public FivetServiceImpl(String databaseUrl) {
         this.fivetController = new FivetControllerImpl(databaseUrl);
     }
+
     private static StatusRuntimeException buildException(final Code code, final String message) {
         return StatusProto.toStatusRuntimeException(Status.newBuilder()
                 .setCode(code.getNumber())
@@ -70,7 +76,8 @@ public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
     }
 
     /**
-     * authenticate
+     * authenticate.
+     *
      * @param request to use, contains a login and password.
      * @param responseObserver to use.
      */
@@ -92,7 +99,8 @@ public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
     }
 
     /**
-     * add a control
+     * add a control.
+     *
      * @param request to use, contains a Control
      * @param responseObserver to use.
      */
@@ -105,14 +113,15 @@ public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
             responseObserver.onNext(FichaMedicaReply.newBuilder().setFichaMedica(ModelAdapter.build(fichaMedica.get()))
                     .build());
             responseObserver.onCompleted();
-        }
-        else {
-            //responseObserver.onError(buildException(Code.PERMISSION_DENIED, "Wrong control"));
+        } else {
+
+            responseObserver.onError(buildException(Code.PERMISSION_DENIED, "Wrong control"));
         }
     }
 
     /**
-     * retrieve a FichaMedica
+     * retrieve a FichaMedica.
+     *
      * @param request to use, contains a NumeroFicha.
      * @param responseObserver to use.
      */
@@ -124,34 +133,36 @@ public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
             responseObserver.onNext(FichaMedicaReply.newBuilder().setFichaMedica(ModelAdapter.build(fichaMedica.get()))
                     .build());
             responseObserver.onCompleted();
-        }
-        else {
-            //responseObserver.onError(buildException(Code.PERMISSION_DENIED, "Wrong number"));
+        } else {
+            responseObserver.onError(buildException(Code.PERMISSION_DENIED, "Wrong number"));
         }
     }
 
     /**
-     * Search a FichaMedica
+     * Search a FichaMedica.
+     *
      * @param request to use, contains a FichaMedica
      * @param responseObserver to use.
      */
+    @SuppressWarnings("checkstyle:MethodParamPad")
     public void searchFichaMedica(SearchFichaMedicaReq request, StreamObserver<FichaMedicaReply> responseObserver) {
         Collection<FichaMedica> fichasMedicasEncontradas = new ArrayList<>();
         Collection<FichaMedica> fichasMedicasBD = this.fivetController.getAllFichaMedica();
         // Busqueda si el query contiene numeros
         if (NumberUtils.isCreatable(request.getQuery())) {
             // Busqueda por numero de ficha
-            Optional<FichaMedica> fichaMedicaNumero = this.fivetController.getFichaMedica(Integer.valueOf(request.getQuery()));
+            Optional<FichaMedica> fichaMedicaNumero = this.fivetController
+                    .getFichaMedica(Integer.valueOf(request.getQuery()));
             if (fichaMedicaNumero.isPresent()) {
                 fichasMedicasEncontradas.add(fichaMedicaNumero.get());
             }
             // Busqueda por coincidencias en el rut
-            Collection<FichaMedica> fichasMedicasRut = this.fivetController.searchFichaMedica
-                    (request.getQuery(), fichasMedicasBD, 1);
+            Collection<FichaMedica> fichasMedicasRut = this.fivetController
+                    .searchFichaMedica
+                            (request.getQuery(), fichasMedicasBD, 1);
             fichasMedicasEncontradas.addAll(fichasMedicasRut);
-        }
-        // Busqueda si el query tiene letras o simbolos
-        else {
+            // Busqueda si el query tiene letras o simbolos
+        } else {
             // Busqueda por coincidencias en el rut
             Collection<FichaMedica> fichasMedicasRut = this.fivetController.searchFichaMedica
                     (request.getQuery(), fichasMedicasBD, 1);
@@ -176,14 +187,14 @@ public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
                         .build());
             }
             responseObserver.onCompleted();
-        }
-        else {
-            //responseObserver.onError(buildException(Code.PERMISSION_DENIED, "Wrong number"));
+        } else {
+            responseObserver.onError(buildException(Code.PERMISSION_DENIED, "Wrong number"));
         }
     }
 
     /**
      * Add a FichaMedica.
+     *
      * @param request to use, contains a Control.
      * @param responseObserver to use.
      */
@@ -194,6 +205,12 @@ public class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
         responseObserver.onCompleted();
     }
 
+    /**
+     * add a Persona to the system.
+     *
+     * @param request contains a Persona
+     * @param responseObserver to use
+     */
     public void addPersona(AddPersonaReq request, StreamObserver<PersonaReply> responseObserver) {
         Persona persona = ModelAdapter.build(request.getPersona());
         this.fivetController.addPersona(persona, "");

@@ -27,11 +27,11 @@ package cl.ucn.disc.pdis.fivet;
 import cl.ucn.disc.pdis.fivet.grpc.*;
 import cl.ucn.disc.pdis.fivet.services.FivetController;
 import cl.ucn.disc.pdis.fivet.services.FivetControllerImpl;
+import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import io.grpc.Server;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -44,6 +44,11 @@ import java.util.Optional;
 @Slf4j
 public class FivetServer {
 
+    /**
+     * The Main.
+     *
+     * @param args to use
+     */
     @SneakyThrows({InterruptedException.class, IOException.class})
     public static void main(String[] args) {
         FivetServiceImpl fivetService = new FivetServiceImpl("jdbc:h2:mem:fivet");
@@ -57,6 +62,7 @@ public class FivetServer {
 
     private static class FivetServiceImpl extends FivetServiceGrpc.FivetServiceImplBase {
         private final FivetController fivetController;
+
         public FivetServiceImpl(String databaseUrl) {
             this.fivetController = new FivetControllerImpl(databaseUrl);
         }
@@ -81,8 +87,7 @@ public class FivetServer {
                         .build()
                 );
                 responseObserver.onCompleted();
-            }
-            else {
+            } else {
                 responseObserver.onError(new RuntimeException("Persona not found"));
             }
         }

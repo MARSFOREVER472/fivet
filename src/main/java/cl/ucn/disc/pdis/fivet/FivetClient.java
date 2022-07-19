@@ -39,6 +39,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class FivetClient {
 
+    /**
+     * The main.
+     *
+     * @param args to use.
+     */
     public static void main(String[] args) {
 
         log.debug("Starting the Client ..");

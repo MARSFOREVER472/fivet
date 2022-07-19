@@ -53,28 +53,32 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
     DataPersisterManager.registerDataPersisters(ZonedDateTimeType.INSTANCE);
     DataPersisterManager.registerDataPersisters(LocalDateType.INSTANCE);
 }
+
     /**
      * The real DAO (connection to ORMLite DAO).
      */
+
     private final Dao<T, Integer> theDao;
 
     private static ConnectionSource cs;
 
     /**
-     * The Constructor of ORMLiteDAO
+     * The Constructor of ORMLiteDAO.
+     *
      * @param cs        the connection to the database.
      * @param theClass     the type of T.
      */
     @SneakyThrows(SQLException.class)
-    public ORMLiteDAO(@NonNull final ConnectionSource cs, @NonNull final Class<T> theClass){
+    public ORMLiteDAO(@NonNull final ConnectionSource cs, @NonNull final Class<T> theClass) {
         this.theDao = DaoManager.createDao(cs, theClass);
         ORMLiteDAO.cs = cs;
     }
 
     /**
-     * The builder of the connection source
+     * The builder of the connection source.
+     *
      * @param s to use
-     * @return
+     * @return the cs
      */
     @SneakyThrows
     public static ConnectionSource buildConnectionSource(String s) {
@@ -84,7 +88,7 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
 
 
     /**
-     * Get optional T
+     * Get optional T.
      *
      * @param id to search
      */
@@ -104,26 +108,29 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
     }
 
     /**
-     * Get optional, T
+     * Get optional, T.
+     *
      * @param attrib the name of attribute
      * @param value the value
      * @return a T
      */
+    @SuppressWarnings("checkstyle:Indentation")
     @SneakyThrows
     @Override
     public Optional<T> get(String attrib, Object value) {
         List<T> list = this.theDao.queryForEq(attrib, value);
 
-        for (T t : list)
+        for (T t : list) {
             if (t.getDeletedAt() == null) {
                 return Optional.of(t);
             }
-        return Optional.empty();
+        }
+            return Optional.empty();
     }
 
 
     /**
-     * Get all the Ts
+     * Get all the Ts.
      *
      * @return the List of T
      */
@@ -189,7 +196,7 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
         }
         t.get().deletedAt = ZonedDateTime.now();
 
-        if (this.theDao.update(t.get()) != 1){
+        if (this.theDao.update(t.get()) != 1) {
             throw new SQLException("Rows deleted =/= 1");
         }
     }
@@ -208,7 +215,7 @@ public final class ORMLiteDAO<T extends BaseEntity> implements DAO<T> {
     }
 
     /**
-     * Drop and create a new table
+     * Drop and create a new table.
      */
     @Override
     @SneakyThrows

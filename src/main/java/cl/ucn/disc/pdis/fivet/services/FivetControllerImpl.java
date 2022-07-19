@@ -35,8 +35,8 @@ import com.j256.ormlite.table.TableUtils;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.swing.text.html.Option;
@@ -63,10 +63,11 @@ public class FivetControllerImpl implements FivetController {
     /**
      * The hasher.
      */
-    private final static PasswordEncoder PASSWORD_ENCODER = new Argon2PasswordEncoder();
+    private final PasswordEncoder passwordEncoder = new Argon2PasswordEncoder();
 
     /**
-     * The FivetControllerImpl Constructor
+     * The FivetControllerImpl Constructor.
+     *
      * @param dbUrl to connect
      */
     @SneakyThrows
@@ -102,7 +103,7 @@ public class FivetControllerImpl implements FivetController {
     }
 
     /**
-     * Check if the Email or Rut exists in the system
+     * Check if the Email or Rut exists in the system.
      *
      * @param login rut or email
      * @return a persona
@@ -118,7 +119,8 @@ public class FivetControllerImpl implements FivetController {
 
 
     /**
-     * Authentication of a person in the system
+     * Authentication of a person in the system.
+     *
      * @param login The login account
      * @param passwd The password of the user
      * @return a Persona
@@ -205,6 +207,7 @@ public class FivetControllerImpl implements FivetController {
 
     /**
      * Search 0 or more FichaMedica and return a List of FichaMedica.
+     *
      * @param q to use.
      * @param fichasMedicasDB the FichaMedica list of the data base.
      * @param attribute to use.
@@ -214,6 +217,7 @@ public class FivetControllerImpl implements FivetController {
     public Collection<FichaMedica> searchFichaMedica(String q, Collection<FichaMedica>
             fichasMedicasDB, Integer attribute) {
         Collection<FichaMedica> fichasMedicas = new ArrayList<>();
+
         if (attribute == 1) {
             for (FichaMedica fichaMedica : fichasMedicasDB) {
                 int coincidencias = StringUtils.countMatches(q, fichaMedica.getDuenio().getRut());
@@ -221,16 +225,14 @@ public class FivetControllerImpl implements FivetController {
                     fichasMedicas.add(fichaMedica);
                 }
             }
-        }
-        else if (attribute == 2) {
+        } else if (attribute == 2) {
             for (FichaMedica fichaMedica : fichasMedicasDB) {
                 int coincidencias = StringUtils.countMatches(q, fichaMedica.getNombrePaciente());
                 if (coincidencias > 1) {
                     fichasMedicas.add(fichaMedica);
                 }
             }
-        }
-        else if (attribute == 3) {
+        } else if (attribute == 3) {
             for (FichaMedica fichaMedica : fichasMedicasDB) {
                 int coincidencias = StringUtils.countMatches(q, fichaMedica.getDuenio().getNombre());
                 if (coincidencias > 1) {

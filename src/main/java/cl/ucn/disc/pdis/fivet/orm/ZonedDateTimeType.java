@@ -42,12 +42,12 @@ import java.time.format.DateTimeFormatter;
 public class ZonedDateTimeType extends BaseDataType {
 
     /**
-     * Singleton!
+     * Singleton!.
      */
     public static final ZonedDateTimeType INSTANCE = new ZonedDateTimeType();
 
     /**
-     * The formatter (ZonedDateTime -- String)
+     * The formatter (ZonedDateTime -- String).
      */
     private static final DateTimeFormatter DTF = DateTimeFormatter.ISO_ZONED_DATE_TIME;
 
@@ -57,13 +57,16 @@ public class ZonedDateTimeType extends BaseDataType {
     private static final int DEFAULT_WIDTH = 100;
 
     /**
-     * The private constructor
+     * The private constructor.
+     *
      */
     private ZonedDateTimeType() {
         super(SqlType.STRING, new Class<?>[]{ZonedDateTime.class});
     }
 
     /**
+     * Get default width.
+     *
      * @return the size of the database field
      */
     @Override
@@ -81,18 +84,19 @@ public class ZonedDateTimeType extends BaseDataType {
     }
 
     /**
-     * The Java to SQL converter
+     * The Java to SQL converter.
      */
     @Override
     public Object javaToSqlArg(FieldType fieldType, Object javaObject) {
         ZonedDateTime zdt = (ZonedDateTime) javaObject;
-        if (zdt == null) return null;
+        if (zdt == null) {
+            return null;
+        }
         return DTF.format(zdt);
     }
 
     /**
      * Return the SQL argument object extracted from the results associated with column in position columnPos.
-     *
      * example, if the type is a date-long then this will return a long value or null
      */
     @Override
@@ -101,11 +105,13 @@ public class ZonedDateTimeType extends BaseDataType {
     }
 
     /**
-     * The SQL to Java converter
+     * The SQL to Java converter.
      */
     @Override
     public Object sqlArgToJava(FieldType fieldType, Object sqlArg, int columnPos) {
-        if (sqlArg == null) return null;
+        if (sqlArg == null) {
+            return null;
+        }
         return ZonedDateTime.parse((String) sqlArg, DTF);
     }
 }

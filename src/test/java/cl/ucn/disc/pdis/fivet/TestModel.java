@@ -86,6 +86,8 @@ public class TestModel {
             Persona persona = Persona.builder()
                     .rut("197105992")
                     .nombre("Marcelo Lam Biaggini")
+                    .telefonoFijo("55784751")
+                    .telefonoMovil("")
                     .email("marcelo.lam@alumnos.ucn.cl")
                     .password("mlam123")
                     .direccion("Angamos 0610")

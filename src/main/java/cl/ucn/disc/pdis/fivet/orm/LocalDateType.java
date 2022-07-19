@@ -34,7 +34,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 /**
- * The ZonedDateTime to Database VARCHAR converter
+ * The ZonedDateTime to Database VARCHAR converter.
  *
  * @author Marcelo Lam.
  */
@@ -47,24 +47,26 @@ public final class LocalDateType extends BaseDataType {
     public static final LocalDateType INSTANCE = new LocalDateType();
 
     /**
-     * The formatter (ZonedDateTime -- String)
+     * The formatter (ZonedDateTime -- String).
      */
     private static final DateTimeFormatter LD = DateTimeFormatter.ISO_LOCAL_DATE;
 
     /**
-     * The Size of the String: 2022-04-08T18:10:56.1160769-04:00[America/santiago]
+     * The Size of the String: 2022-04-08T18:10:56.1160769-04:00[America/santiago].
      */
     private static final int DEFAULT_WIDTH = 10;
 
     /**
-     * The private constructor
+     * The private constructor.
      */
     private LocalDateType() {
         super(SqlType.STRING, new Class<?>[]{LocalDate.class});
     }
 
     /**
-     * @return the size of the database field
+     * The default width.
+     *
+     * @return the size of the database field.
      */
     @Override
     public int getDefaultWidth() {
@@ -81,18 +83,19 @@ public final class LocalDateType extends BaseDataType {
     }
 
     /**
-     * The Java to SQL converter
+     * The Java to SQL converter.
      */
     @Override
     public Object javaToSqlArg(FieldType fieldType, Object javaObject) {
         LocalDate ld = (LocalDate) javaObject;
-        if (ld == null) return null;
+        if (ld == null) {
+            return null;
+        }
         return LD.format(ld);
     }
 
     /**
      * Return the SQL argument object extracted from the results associated with column in position columnPos.
-     *
      * example, if the type is a date-long then this will return a long value or null
      */
     @Override
@@ -101,11 +104,13 @@ public final class LocalDateType extends BaseDataType {
     }
 
     /**
-     * The SQL to Java converter
+     * The SQL to Java converter.
      */
     @Override
     public Object sqlArgToJava(FieldType fieldType, Object sqlArg, int columnPos) {
-        if (sqlArg == null) return null;
+        if (sqlArg == null) {
+            return null;
+        }
         return LocalDate.parse((String) sqlArg, LD);
     }
 

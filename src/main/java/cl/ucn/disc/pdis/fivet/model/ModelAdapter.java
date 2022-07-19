@@ -49,6 +49,7 @@ public final class ModelAdapter {
 
     /**
      * Persona java Class to Persona gRPC.
+     *
      * @param persona Persona java.
      * @return a personaEntity.
      */
@@ -63,6 +64,7 @@ public final class ModelAdapter {
 
     /**
      * Persona gRPC to Persona java.
+     *
      * @param persona PersonaEntity.
      * @return a persona java.
      */
@@ -77,6 +79,7 @@ public final class ModelAdapter {
 
     /**
      * FichaMedica java to FichaMedica gRPC.
+     *
      * @param fichaMedica FichaMedica java
      * @return a FichaMedicaEntity.
      */
@@ -97,6 +100,7 @@ public final class ModelAdapter {
 
     /**
      * FichaMedica gRPC to FichaMedica java.
+     *
      * @param fichaMedica FichaMedicaEntity.
      * @return a FichaMedica java.
      */
@@ -116,7 +120,8 @@ public final class ModelAdapter {
     }
 
     /**
-     * Control java to Control gRPC
+     * Control java to Control gRPC.
+     *
      * @param control Control java
      * @return ControlEntity
      */
@@ -133,7 +138,8 @@ public final class ModelAdapter {
     }
 
     /**
-     * Control gRPC to Control java
+     * Control gRPC to Control java.
+     *
      * @param control ControlEntity
      * @return a Control java
      */
@@ -150,7 +156,8 @@ public final class ModelAdapter {
     }
 
     /**
-     * String to ZonedDateTime
+     * String to ZonedDateTime.
+     *
      * @param dateTime the date
      * @return a ZonedDateTime
      */
@@ -159,7 +166,8 @@ public final class ModelAdapter {
     }
 
     /**
-     * Collection of ControlEntity to Collection of Control
+     * Collection of ControlEntity to Collection of Control.
+     *
      * @param controlsEntity to use
      * @return Collection of Control
      */
@@ -172,7 +180,8 @@ public final class ModelAdapter {
     }
 
     /**
-     * Collection of Control to Collection of ControlEntity
+     * Collection of Control to Collection of ControlEntity.
+     *
      * @param controles to use
      * @return Collection of ControlEntity
      */
