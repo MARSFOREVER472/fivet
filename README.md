@@ -19,7 +19,7 @@ message PersonaEntity {
 }
 ```
 
-### Mensaje 2: Enitdad Ficha Medica
+### Mensaje 2: Entidad Ficha Medica
 
 ```
 message FichaMedicaEntity {
