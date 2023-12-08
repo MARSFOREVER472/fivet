@@ -76,9 +76,13 @@ message AddFichaReq {
 }
 ```
 
+### Mensaje 6: Para recuperar una ficha médica.
+
+```
 message RetrieveFichaMedicaReq {
   int32 numeroFicha = 1;
 }
+```
 
 message SearchFichaMedicaReq {
   string query = 1;
