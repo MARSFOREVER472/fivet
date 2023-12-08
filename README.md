@@ -100,9 +100,13 @@ message AddPersonaReq {
 }
 ```
 
+### Mensaje 9: Añadir un control médico desde su entidad (Control).
+
+```
 message AddControlReq {
   ControlEntity control = 1;
 }
+```
 
 message ControlRequest {
   ControlEntity control = 1;
