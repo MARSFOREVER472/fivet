@@ -116,10 +116,14 @@ message ControlRequest {
 }
 ```
 
+### Mensaje 11: Para autenticar a un usuario mediante sus credenciales.
+
+```
 message AuthenticateReq {
   string login = 1;
   string password = 2;
 }
+```
 
 message PersonaReply {
   PersonaEntity persona = 1;
