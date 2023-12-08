@@ -133,6 +133,9 @@ message PersonaReply {
 }
 ```
 
+### Mediante un servicio de una ficha veterinaria.
+
+```
 service FivetService {
 
   rpc authenticate(AuthenticateReq) returns(PersonaReply) {}
@@ -148,9 +151,10 @@ service FivetService {
   rpc addPersona(AddPersonaReq) returns (PersonaReply) {}
 
 }
+```
 
 Espero que esto les sirva de apoyo!!!
-
 Muchas gracias!!!
+
 ## Integrante:
 Marcelo Andrés Lam Biaggini
