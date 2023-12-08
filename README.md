@@ -60,5 +60,65 @@ enum SexoEntity {
 }
 ```
 
+Mensaje 4: Respuesta de la Entidad Ficha médica
+
+```
+message FichaMedicaReply {
+  FichaMedicaEntity fichaMedica = 1;
+}
+```
+
+message AddFichaReq {
+  FichaMedicaEntity fichaMedica = 1;
+}
+
+message RetrieveFichaMedicaReq {
+  int32 numeroFicha = 1;
+}
+
+message SearchFichaMedicaReq {
+  string query = 1;
+}
+
+message AddPersonaReq {
+  PersonaEntity persona = 1;
+}
+
+message AddControlReq {
+  ControlEntity control = 1;
+}
+
+message ControlRequest {
+  ControlEntity control = 1;
+}
+
+message AuthenticateReq {
+  string login = 1;
+  string password = 2;
+}
+
+message PersonaReply {
+  PersonaEntity persona = 1;
+}
+
+service FivetService {
+
+  rpc authenticate(AuthenticateReq) returns(PersonaReply) {}
+
+  rpc addControl(AddControlReq) returns(FichaMedicaReply) {}
+
+  rpc retrieveFicha(RetrieveFichaMedicaReq) returns(FichaMedicaReply) {}
+
+  rpc searchFicha(SearchFichaMedicaReq) returns (stream FichaMedicaEntity) {}
+
+  rpc addFicha(AddFichaReq) returns(FichaMedicaReply) {}
+
+  rpc addPersona(AddPersonaReq) returns (PersonaReply) {}
+
+}
+
+Espero que esto les sirva de apoyo!!!
+
+Muchas gracias!!!
 ## Integrante:
 Marcelo Andrés Lam Biaggini
