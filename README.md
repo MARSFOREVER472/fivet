@@ -108,9 +108,13 @@ message AddControlReq {
 }
 ```
 
+### Mensaje 10: Solicitar controles médicos.
+
+```
 message ControlRequest {
   ControlEntity control = 1;
 }
+```
 
 message AuthenticateReq {
   string login = 1;
