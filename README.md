@@ -60,7 +60,7 @@ enum SexoEntity {
 }
 ```
 
-Mensaje 4: Respuesta de la Entidad Ficha médica
+### Mensaje 4: Respuesta de la Entidad Ficha médica
 
 ```
 message FichaMedicaReply {
