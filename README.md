@@ -84,9 +84,13 @@ message RetrieveFichaMedicaReq {
 }
 ```
 
+### Mensaje 7: Para buscar una ficha médica a la cual se le solicita.
+
+```
 message SearchFichaMedicaReq {
   string query = 1;
 }
+```
 
 message AddPersonaReq {
   PersonaEntity persona = 1;
