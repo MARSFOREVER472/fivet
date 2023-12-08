@@ -36,5 +36,18 @@ message FichaMedicaEntity {
 }
 ```
 
+### Mensaje 3: Entidad Control
+
+```
+message ControlEntity {
+  string fecha = 1;
+  float temperatura = 2;
+  float peso = 3;
+  float altura = 4;
+  string diagnostico = 5;
+  PersonaEntity veterinario = 6;
+  FichaMedicaEntity fichaMedica = 7;
+}
+```
 ## Integrante:
 Marcelo Andrés Lam Biaggini
