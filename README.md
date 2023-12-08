@@ -92,9 +92,13 @@ message SearchFichaMedicaReq {
 }
 ```
 
+### Mensaje 8: Agregar una persona solicitada.
+
+```
 message AddPersonaReq {
   PersonaEntity persona = 1;
 }
+```
 
 message AddControlReq {
   ControlEntity control = 1;
