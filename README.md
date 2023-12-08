@@ -68,9 +68,13 @@ message FichaMedicaReply {
 }
 ```
 
+### Mensaje 5: Para añadir una ficha médica desde su entidad (Ficha Médica).
+
+```
 message AddFichaReq {
   FichaMedicaEntity fichaMedica = 1;
 }
+```
 
 message RetrieveFichaMedicaReq {
   int32 numeroFicha = 1;
