@@ -49,5 +49,16 @@ message ControlEntity {
   FichaMedicaEntity fichaMedica = 7;
 }
 ```
+
+### Según género de la persona
+
+```
+enum SexoEntity {
+  UNDEFINED = 0;
+  MACHO = 1;
+  HEMBRA = 2;
+}
+```
+
 ## Integrante:
 Marcelo Andrés Lam Biaggini
