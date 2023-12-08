@@ -125,9 +125,13 @@ message AuthenticateReq {
 }
 ```
 
+### Mensaje 12: Para traer de regreso a una persona desde el sistema.
+
+```
 message PersonaReply {
   PersonaEntity persona = 1;
 }
+```
 
 service FivetService {
 
