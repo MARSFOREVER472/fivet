@@ -3,9 +3,14 @@
 ## Descripción del trabajo:
 Proyecto Fivet para la asignatura del Proyecto Desarrollo e Integración de Soluciones año 2022, con todas las dependencias instaladas mediante gradle, el archivo .proto para generar llamados a los métodos de algunas clases del proyecto en particular.
 
-- El proyecto se dividen por algunos de sus atributos a considerar:
+- El proyecto se divide por algunos de sus atributos a considerar:
 
-  - Persona.
+    - Control.
+    - Examen.
+    - Ficha médica.
+    - Foto (No lo toma en cuenta al testearlo pero se considera en el proyecto).
+    - Persona.
+      
 - El archivo .proto se distribuye de la siguiente manera en código:
 
 ### Mensaje 1: Entidad Persona
