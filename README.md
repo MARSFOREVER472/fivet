@@ -19,7 +19,7 @@ Proyecto Fivet para la asignatura del Proyecto Desarrollo e Integración de Solu
 - También, en este proyecto se considera uno de estos métodos para poder realizar efectivamente las pruebas unitarias:
 
   - Database (Conexiones a la base de datos).
-  - GRPC.
+  - gRPC (Protocolo de comunicación entre servicios).
   - Modelo general del problema.
       
 - El archivo .proto se distribuye de la siguiente manera en código:
