@@ -10,6 +10,11 @@ Proyecto Fivet para la asignatura del Proyecto Desarrollo e Integración de Solu
     - Ficha médica.
     - Foto (No lo toma en cuenta al testearlo pero se considera en el proyecto).
     - Persona.
+
+- El servicio de una ficha veterinaria se componen de 2 modalidades:
+
+  - Cliente.
+  - Servidor.
       
 - El archivo .proto se distribuye de la siguiente manera en código:
 
