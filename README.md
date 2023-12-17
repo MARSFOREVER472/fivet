@@ -13,8 +13,15 @@ Proyecto Fivet para la asignatura del Proyecto Desarrollo e Integración de Solu
 
  ## Qué atributos tomaría en cuenta para cada clase del proyecto?
 
- - Para la clase Control:
-   - 
+  - Para la clase Control:
+   
+    - Fecha.
+    - Temperatura.
+    - Peso.
+    - Altura.
+    - Diagnóstico.
+    - Veterinario.
+    - Ficha Médica.
 
 - El servicio de una ficha veterinaria se componen de 2 modalidades:
 
