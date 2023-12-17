@@ -27,6 +27,8 @@ Proyecto Fivet para la asignatura del Proyecto Desarrollo e Integración de Solu
 
   - Para la clase Persona:
 
+  - Para la clase Foto:
+
 
 ## Respecto al servicio de una ficha veterinaria...
 
