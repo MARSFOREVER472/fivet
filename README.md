@@ -25,6 +25,9 @@ Proyecto Fivet para la asignatura del Proyecto Desarrollo e Integración de Solu
    
   - Para la clase Examen:
 
+  - Para la clase Persona:
+
+
 ## Respecto al servicio de una ficha veterinaria...
 
 - El servicio de una ficha veterinaria se componen de 2 modalidades:
