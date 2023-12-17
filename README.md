@@ -23,6 +23,8 @@ Proyecto Fivet para la asignatura del Proyecto Desarrollo e Integración de Solu
     - Veterinario.
     - Ficha Médica.
 
+## Respecto al servicio de una ficha veterinaria...
+
 - El servicio de una ficha veterinaria se componen de 2 modalidades:
 
   - Cliente.
