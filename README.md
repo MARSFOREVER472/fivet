@@ -22,6 +22,8 @@ Proyecto Fivet para la asignatura del Proyecto Desarrollo e Integración de Solu
     - Diagnóstico.
     - Veterinario.
     - Ficha Médica.
+   
+  - Para la clase Examen:
 
 ## Respecto al servicio de una ficha veterinaria...
 
