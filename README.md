@@ -29,6 +29,8 @@ Proyecto Fivet para la asignatura del Proyecto Desarrollo e Integración de Solu
 
   - Para la clase Foto:
 
+    - URL.
+
   - Para la clase Ficha Médica:
 
 
