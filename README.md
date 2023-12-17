@@ -25,6 +25,9 @@ Proyecto Fivet para la asignatura del Proyecto Desarrollo e Integración de Solu
    
   - Para la clase Examen:
 
+    - Nombre.
+    - Fecha.
+
   - Para la clase Persona:
 
   - Para la clase Foto:
