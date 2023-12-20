@@ -49,8 +49,8 @@ Proyecto Fivet para la asignatura del Proyecto Desarrollo e Integración de Solu
 
 - El servicio de una ficha veterinaria se componen de 2 modalidades:
 
-  - Cliente.
-  - Servidor.
+  - Cliente (FivetClient).
+  - Servidor (FivetServer).
 
 - También, en este proyecto se considera uno de estos métodos para poder realizar efectivamente las pruebas unitarias:
 
