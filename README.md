@@ -25,8 +25,8 @@ Proyecto Fivet para la asignatura del Proyecto Desarrollo e Integración de Solu
    
   - Para la clase Examen:
 
-    - Nombre.
-    - Fecha.
+    - Nombre. (Nombre del examen médico).
+    - Fecha. (Fecha en la que se realizó el examen).
 
   - Para la clase Persona:
 
