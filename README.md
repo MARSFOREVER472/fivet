@@ -5,6 +5,8 @@ Proyecto Fivet para la asignatura del Proyecto Desarrollo e Integración de Solu
 
 ## Casos de uso para la realización de una ficha veterinaria (FiVet)
 
+1.- **Crear Ficha Veterinaria:** _Comienza cuando el veterinario desea crear una ficha para un paciente que no tiene una. El veterinario tendrá que registrar los datos del paciente y opcionalmente los del dueño. Para los datos del paciente, el veterinario tendrá que ingresar el nombre, especie, fecha de nacimiento o edad, raza, sexo, color, y podrá tomar una foto en el momento, o asociar un archivo de imagen desde el dispositivo o por medio de un link. Con respecto al dueño, interesa registrar el nombre, dirección, teléfono fijo, teléfono móvil, email y RUT. Además tendrá que indicar si el tipo de ficha es interno o externo (en caso de una consulta para un paciente que no es cliente de la veterinaria)_.
+
 - El proyecto se divide por algunos de sus atributos a considerar:
 
     - Control.
