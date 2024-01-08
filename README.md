@@ -12,6 +12,8 @@
 3.- **Agregar Control a un Paciente:** _El veterinario desea agregar un control a un paciente que puede tener ficha o no. Para ello, en el caso de que tenga, se realiza el caso de uso Buscar Ficha Veterinaria. En caso de no tener se
 realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los datos de un control, esto es: fecha, temperatura, peso, altura, diagnóstico, nombre del veterinario que la realizó, la fecha del próximo control si es que se aplica y si es necesario asociar a un examen con su nombre y fecha en que se realizó._
 
+4.- **Crear Carnet de un Paciente:** _El veterinario desea crear un carnet a un paciente interno o un paciente nuevo. Para ello, en el caso de que sea un paciente interno, se realiza el caso de uso Buscar Ficha Veterinaria. En caso de ser nuevo, se realiza el caso de uso Crear Ficha Veterinaria. El veterinario extrae los datos que se requieren para ingresarlos al carnet, con respecto al dueño, estos son: propietario (nombre del dueño), domicilio, teléfono y a los que respecta al paciente: número de ficha, nombre del paciente, especie, sexo, edad y foto._
+
 - El proyecto se divide por algunos de sus atributos a considerar:
 
     - Control.
