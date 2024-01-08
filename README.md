@@ -9,6 +9,9 @@
 
 2.- **Buscar Ficha Veterinaria:** _El veterinario desea ver la ficha de un paciente. Para ello la búsqueda se realiza por RUT del dueño, nombre del paciente o número de ficha. En caso de encontrar más de una (nombre de paciente) se debe mostrar un resumen de todas las encontradas, el veterinario podrá seleccionar una de esa lista. En caso de encontrar sólo una, se despliega la información de la ficha._
 
+3.- **Agregar Control a un Paciente:** _El veterinario desea agregar un control a un paciente que puede tener ficha o no. Para ello, en el caso de que tenga, se realiza el caso de uso Buscar Ficha Veterinaria. En caso de no tener se
+realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los datos de un control, esto es: fecha, temperatura, peso, altura, diagnóstico, nombre del veterinario que la realizó, la fecha del próximo control si es que se aplica y si es necesario asociar a un examen con su nombre y fecha en que se realizó._
+
 - El proyecto se divide por algunos de sus atributos a considerar:
 
     - Control.
