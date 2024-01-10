@@ -233,6 +233,7 @@ service FivetService {
 
 Acerca de cómo se construye un programa mediante este modelo:
 
+![image](https://github.com/MARSFOREVER472/fivet/assets/69094327/f13efed6-93a8-4410-a76f-88f947b3031b)
 
 
 Espero que esto les sirva de apoyo!!!
