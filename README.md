@@ -237,7 +237,8 @@ _Acerca de cómo se construye un programa siguiendo este modelo que está aquí 
 
 
 **Espero que esto les sirva de apoyo!!!**
-Muchas gracias!!!
+
+_Muchas gracias!!!_
 
 ## Integrante:
 Marcelo Andrés Lam Biaggini
