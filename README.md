@@ -229,6 +229,12 @@ service FivetService {
 }
 ```
 
+## Arquitectura de un ORM
+
+Acerca de cómo se construye un programa mediante este modelo:
+
+
+
 Espero que esto les sirva de apoyo!!!
 Muchas gracias!!!
 
