@@ -231,7 +231,7 @@ service FivetService {
 
 ## Arquitectura de un ORM
 
-Acerca de cómo se construye un programa siguiendo este modelo que está aquí abajo:
+_Acerca de cómo se construye un programa siguiendo este modelo que está aquí abajo_:
 
 ![image](https://github.com/MARSFOREVER472/fivet/assets/69094327/f13efed6-93a8-4410-a76f-88f947b3031b)
 
