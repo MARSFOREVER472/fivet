@@ -34,7 +34,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
     - Veterinario.
     - Ficha Médica.
    
-  - Para la clase Examen:
+  - _Para la clase Examen:_
 
     - Nombre. (Nombre del examen médico).
     - Fecha. (Fecha en la que se realizó el examen).
