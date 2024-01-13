@@ -39,7 +39,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
     - Nombre. (Nombre del examen médico).
     - Fecha. (Fecha en la que se realizó el examen).
 
-  - Para la clase Persona:
+  - _Para la clase Persona:_
 
     - RUT.
     - Nombre.
@@ -49,7 +49,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
     - Correo.
     - Contraseña.
 
-  - Para la clase Foto:
+  - _Para la clase Foto:_
 
     - URL.
 
