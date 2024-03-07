@@ -20,7 +20,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
     - _Examen._
     - _Ficha médica._
     - _Foto (No lo toma en cuenta al testearlo pero se considera en el proyecto)._
-    - Persona.
+    - _Persona._
 
  ## Qué atributos tomaría en cuenta para cada clase del proyecto?
 
