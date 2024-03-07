@@ -17,7 +17,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
 - _El proyecto se divide por algunos de sus atributos a considerar:_
 
     - _Control._
-    - Examen.
+    - _Examen._
     - Ficha médica.
     - Foto (No lo toma en cuenta al testearlo pero se considera en el proyecto).
     - Persona.
