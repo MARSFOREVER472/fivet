@@ -1,7 +1,7 @@
 # Proyecto Fivet
 
 ### Descripción del trabajo:
-**Proyecto Fivet para la asignatura del Proyecto Desarrollo e Integración de Soluciones año 2022, con todas las dependencias instaladas mediante gradle, el archivo .proto para generar llamados a los métodos de algunas clases del proyecto en particular.**
+**_Proyecto Fivet para la asignatura del Proyecto Desarrollo e Integración de Soluciones año 2022, con todas las dependencias instaladas mediante gradle, el archivo .proto para generar llamados a los métodos de algunas clases del proyecto en particular._**
 
 ### Casos de uso para la realización de una ficha veterinaria (FiVet)
 
