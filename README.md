@@ -29,7 +29,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
 
   - **_Para la clase Control:_**
    
-    - _Fecha._
+    - **_Fecha._**
     - Temperatura.
     - Peso.
     - Altura.
