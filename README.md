@@ -35,7 +35,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
     - **_Altura._**
     - **_Diagnóstico._**
     - **_Veterinario._**
-    - Ficha Médica.
+    - _Ficha Médica._
    
   - _Para la clase Examen:_
 
