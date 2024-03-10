@@ -27,7 +27,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
 
  ## Qué atributos tomaría en cuenta para cada clase del proyecto?
 
-  - _Para la clase Control:_
+  - **_Para la clase Control:_**
    
     - Fecha.
     - Temperatura.
