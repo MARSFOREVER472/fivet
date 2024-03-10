@@ -54,7 +54,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
 
   - _Para la clase Foto:_
 
-    - URL.
+    - _URL._
 
   - _Para la clase Ficha Médica:_
 
