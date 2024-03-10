@@ -52,7 +52,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
     - Correo.
     - Contraseña.
 
-  - _Para la clase Foto:_
+  - **_Para la clase Foto:_**
 
     - **_URL._**
 
