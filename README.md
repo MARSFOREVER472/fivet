@@ -46,7 +46,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
 
     - **_RUT._**
     - **_Nombre._**
-    - _Dirección._
+    - **_Dirección._**
     - Teléfono Fijo.
     - Teléfono Móvil.
     - Correo.
