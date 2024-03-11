@@ -50,7 +50,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
     - **_Teléfono Fijo._**
     - **_Teléfono Móvil._**
     - **_Correo._**
-    - Contraseña.
+    - _Contraseña._
 
   - **_Para la clase Foto:_**
 
