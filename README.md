@@ -79,7 +79,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
 - También, en este proyecto se considera uno de estos métodos para poder realizar efectivamente las pruebas unitarias:
 
   - _Database (Conexiones a la base de datos)._
-  - gRPC (Protocolo de comunicación entre servicios).
+  - _gRPC (Protocolo de comunicación entre servicios)._
   - Modelo general del problema.
       
 - El archivo .proto se distribuye de la siguiente manera en código:
