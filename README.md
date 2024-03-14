@@ -71,7 +71,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
 
 ## Respecto al servicio de una ficha veterinaria...
 
-- El servicio de una ficha veterinaria se componen de 2 modalidades:
+- _El servicio de una ficha veterinaria se componen de 2 modalidades:_
 
   - Cliente (FivetClient).
   - Servidor (FivetServer).
