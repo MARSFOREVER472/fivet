@@ -62,7 +62,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
     - _Nombre del paciente._
     - _Especie del paciente._
     - _Fecha de nacimiento._
-    - Raza del paciente.
+    - _Raza del paciente._
     - Sexo del paciente.
     - Tipo del paciente.
     - Dueño del paciente.
