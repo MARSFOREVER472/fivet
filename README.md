@@ -80,7 +80,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
 
   - **_Database (Conexiones a la base de datos)._**
   - **_gRPC (Protocolo de comunicación entre servicios)._**
-  - _Modelo general del problema._
+  - **_Modelo general del problema._**
       
 - El archivo .proto se distribuye de la siguiente manera en código:
 
