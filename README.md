@@ -82,7 +82,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
   - **_gRPC (Protocolo de comunicación entre servicios)._**
   - **_Modelo general del problema._**
       
-- El archivo .proto se distribuye de la siguiente manera en código:
+- _El archivo .proto se distribuye de la siguiente manera en código:_
 
 ### Mensaje 1: Entidad Persona
 
