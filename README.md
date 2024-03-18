@@ -2,7 +2,7 @@
 
 ### PROJECT DESCRIPTION:
 
-_This is the Fivet project for the subject of the Development and Integration of Solutions course in 2022, with all the dependencies installed through a .gradle extension file, another .proto file to generate calls to the methods of some classes of said particular project._
+**_This is the Fivet project for the subject of the Development and Integration of Solutions course in 2022, with all the dependencies installed through a .gradle extension file, another .proto file to generate calls to the methods of some classes of said particular project._**
 
 **_Traducido del español:_**
 
