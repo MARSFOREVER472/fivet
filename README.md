@@ -35,7 +35,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
 
   - **_Control de un paciente._**
   - **_Examen de un paciente._**
-  - **_Ficha médica._**
+  - **_Ficha médica del paciente._**
   - **_Foto (No lo toma en cuenta al testearlo pero se considera en el proyecto)._**
   - **_Persona._**
 
