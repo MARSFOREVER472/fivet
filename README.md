@@ -2,9 +2,9 @@
 
 ### PROJECT DESCRIPTION:
 
-### Descripción del trabajo:
-
 **_Traducido del español:_**
+
+### Descripción del trabajo:
 
 **_Este es el proyecto Fivet para la asignatura del curso Desarrollo e Integración de Soluciones año 2022, con todas las dependencias instaladas mediante un archivo de extensión .gradle, otro archivo .proto para generar llamados a los métodos de algunas clases de dicho proyecto en particular._**
 
