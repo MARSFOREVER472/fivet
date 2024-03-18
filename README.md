@@ -12,7 +12,7 @@
 
 3.- **Add Control to a Patient:** **_The veterinarian wants to add a control to a patient who may or may not have a record. To do this, if it has one, the Search Veterinary Record use case is carried out. If not available, the Create Veterinary Record use case is carried out. The Veterinarian will enter the data of a control, that is: date, temperature, weight, height, diagnosis, name of the veterinarian who performed it, the date of the next control if applicable and if it is necessary to associate an exam with your name. and date it was carried out._**
 
-4.- **Create a Patient Card:** The veterinarian wants to create a card for an internal patient or a new patient. To do this, in the event that it is an inpatient, the use case Search Veterinary Record is carried out. If it is new, the Create Veterinary File use case is carried out. The veterinarian extracts the data required to enter them into the card, with respect to the owner, these are: owner (owner's name), address, telephone number, and with respect to the patient: record number, patient name, species, sex, age and photo.
+4.- **Create a Patient Card:** _The veterinarian wants to create a card for an internal patient or a new patient. To do this, in the event that it is an inpatient, the use case Search Veterinary Record is carried out. If it is new, the Create Veterinary File use case is carried out. The veterinarian extracts the data required to enter them into the card, with respect to the owner, these are: owner (owner's name), address, telephone number, and with respect to the patient: record number, patient name, species, sex, age and photo._
 
 **_Traducido del español:_**
 
