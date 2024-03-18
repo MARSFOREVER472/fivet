@@ -8,7 +8,7 @@
 
 1.- **Create Veterinary Record:** _It begins when the veterinarian wants to create a record for a patient who does not have one. The veterinarian will have to record the patient's data and optionally the owner's data. For patient data, the veterinarian will have to enter the name, species, date of birth or age, breed, sex, color, and can take a photo at the time, or associate an image file from the device or through a link Regarding the owner, it is interesting to register the name, address, landline, mobile phone, email and RUT. You will also have to indicate whether the type of record is internal or external (in the case of a consultation for a patient who is not a client of the veterinary clinic)._
 
-2.- Search Veterinary Record: The veterinarian wants to see a patient's record. To do this, the search is carried out by RUT of the owner, name of the patient or record number. If more than one (patient name) is found, a summary of all those found must be shown, the veterinarian can select one from that list. If only one is found, the information on the file is displayed.
+2.- **Search Veterinary Record:** The veterinarian wants to see a patient's record. To do this, the search is carried out by RUT of the owner, name of the patient or record number. If more than one (patient name) is found, a summary of all those found must be shown, the veterinarian can select one from that list. If only one is found, the information on the file is displayed.
 
 **_Traducido del español:_**
 
