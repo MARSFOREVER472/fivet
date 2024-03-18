@@ -4,7 +4,7 @@
 
 **_This is the Fivet project for the subject of the Development and Integration of Solutions course in 2022, with all the dependencies installed through a .gradle extension file, another .proto file to generate calls to the methods of some classes of said particular project._**
 
-Use cases for creating a veterinary record
+### Use cases for creating a veterinary record
 
 **_Traducido del español:_**
 
