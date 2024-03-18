@@ -10,7 +10,7 @@
 
 2.- **Search Veterinary Record:** **_The veterinarian wants to see a patient's record. To do this, the search is carried out by RUT of the owner, name of the patient or record number. If more than one (patient name) is found, a summary of all those found must be shown, the veterinarian can select one from that list. If only one is found, the information on the file is displayed._**
 
-3.- **Add Control to a Patient:** The veterinarian wants to add a control to a patient who may or may not have a record. To do this, if it has one, the Search Veterinary Record use case is carried out. If not available, the Create Veterinary Record use case is carried out. The Veterinarian will enter the data of a control, that is: date, temperature, weight, height, diagnosis, name of the veterinarian who performed it, the date of the next control if applicable and if it is necessary to associate an exam with your name. and date it was carried out.
+3.- **Add Control to a Patient:** _The veterinarian wants to add a control to a patient who may or may not have a record. To do this, if it has one, the Search Veterinary Record use case is carried out. If not available, the Create Veterinary Record use case is carried out. The Veterinarian will enter the data of a control, that is: date, temperature, weight, height, diagnosis, name of the veterinarian who performed it, the date of the next control if applicable and if it is necessary to associate an exam with your name. and date it was carried out._
 
 **_Traducido del español:_**
 
