@@ -76,7 +76,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
   - **_Cliente (FivetClient)._**
   - **_Servidor (FivetServer)._**
 
-- _También, en este proyecto se considera uno de estos métodos para poder realizar efectivamente las pruebas unitarias:_
+- **_También, en este proyecto se considera uno de estos métodos para poder realizar efectivamente las pruebas unitarias:_**
 
   - **_Database (Conexiones a la base de datos)._**
   - **_gRPC (Protocolo de comunicación entre servicios)._**
