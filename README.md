@@ -255,7 +255,7 @@ service FivetService {
 
 **Espero que esto les sirva de apoyo!!!**
 
-_Muchas gracias!!!_
+**_Muchas gracias!!!_**
 
 ## Integrante:
 Marcelo Andrés Lam Biaggini
