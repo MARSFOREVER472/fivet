@@ -18,7 +18,7 @@
 
 **_Traducido del español:_**
 
- - Patient monitoring (Control).
+ - _Patient monitoring (Control)._
 
 ### Descripción del trabajo:
 
