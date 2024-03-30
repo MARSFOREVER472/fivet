@@ -19,7 +19,7 @@
  - **_Patient monitoring (Control)._**
  - **_Patient examination (Examen)._**
  - **_Patient medical record (Ficha Medica)._**
- - _Patient photo_
+ - **_Patient photo_**
 
 **_Traducido del español:_**
 
