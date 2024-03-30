@@ -20,7 +20,7 @@
  - **_Patient examination (Examen)._**
  - **_Patient medical record (Ficha Medica)._**
  - **_Patient photo (It is not taken into account when testing it but it is considered in the project(Foto))._**
- - **_Person (Persona)_**
+ - **_Person (Persona)._**
 
 **_Traducido del español:_**
 
