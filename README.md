@@ -18,7 +18,7 @@
 
  - **_Patient monitoring (Control)._**
  - **_Patient examination (Examen)._**
- - **_Patient medical record_**
+ - **_Patient medical record (Ficha Medica)._**
 
 **_Traducido del español:_**
 
