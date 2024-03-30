@@ -17,7 +17,7 @@
 **_The project is divided by some of its attributes to regard:_**
 
  - **_Patient monitoring (Control)._**
- - Patient examination (Examen).
+ - _Patient examination (Examen)._
 
 **_Traducido del español:_**
 
