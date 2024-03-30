@@ -14,7 +14,7 @@
 
 4.- **Create a Patient Card:** **_The veterinarian wants to create a card for an internal patient or a new patient. To do this, in the event that it is an inpatient, the use case Search Veterinary Record is carried out. If it is new, the Create Veterinary File use case is carried out. The veterinarian extracts the data required to enter them into the card, with respect to the owner, these are: owner (owner's name), address, telephone number, and with respect to the patient: record number, patient name, species, sex, age and photo._**
 
-_The project is divided by some of its attributes to regard:_
+**_The project is divided by some of its attributes to regard:_**
 
 **_Traducido del español:_**
 
