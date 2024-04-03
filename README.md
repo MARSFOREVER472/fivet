@@ -25,6 +25,7 @@
 ## What attributes would you take into account for each class in the project?
 
  - **_For the Control class:_**
+   - Date.
 
 **_Traducido del español:_**
 
