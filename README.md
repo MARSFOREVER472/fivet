@@ -29,7 +29,7 @@
    - **_Date (Fecha)._**
    - **_Temperature (Temperatura)._**
    - **_Weight (Peso)._**
-   - _Height (Altura)._
+   - **_Height (Altura)._**
 
 **_Traducido del español:_**
 
