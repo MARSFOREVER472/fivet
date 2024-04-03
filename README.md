@@ -34,7 +34,7 @@
    - **_Vet (Veterinario)._**
    - **_Medical record (Ficha Medica)._**
   
- - _For the exam (Examen) class:_
+ - **_For the exam (Examen) class:_**
 
 **_Traducido del español:_**
 
