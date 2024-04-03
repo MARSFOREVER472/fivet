@@ -33,6 +33,8 @@
    - **_Diagnosis (Diagnostico)._**
    - **_Vet (Veterinario)._**
    - **_Medical record (Ficha Medica)._**
+  
+ - For the exam (Examen) class:
 
 **_Traducido del español:_**
 
