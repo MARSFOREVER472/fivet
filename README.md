@@ -31,7 +31,7 @@
    - **_Weight (Peso)._**
    - **_Height (Altura)._**
    - **_Diagnosis (Diagnostico)._**
-   - Vet.
+   - Vet (Veterinario).
 
 **_Traducido del español:_**
 
