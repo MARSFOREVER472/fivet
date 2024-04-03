@@ -32,6 +32,7 @@
    - **_Height (Altura)._**
    - **_Diagnosis (Diagnostico)._**
    - **_Vet (Veterinario)._**
+   - Medical record.
 
 **_Traducido del español:_**
 
