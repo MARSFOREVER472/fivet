@@ -24,6 +24,8 @@
 
 ## What attributes would you take into account for each class in the project?
 
+ - For the Control class:
+
 **_Traducido del español:_**
 
 ### Descripción del trabajo:
