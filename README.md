@@ -28,7 +28,7 @@
    
    - **_Date (Fecha)._**
    - **_Temperature (Temperatura)._**
-   - Weight (Peso).
+   - _Weight (Peso)._
 
 **_Traducido del español:_**
 
