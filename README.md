@@ -36,7 +36,7 @@
   
  - **_For the exam (Examen) class:_**
 
-   - Name (Name of the medical exam (Nombre)).
+   - _Name (Name of the medical exam (Nombre))._
 
 **_Traducido del español:_**
 
