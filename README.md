@@ -27,6 +27,7 @@
  - **_For the Control class:_**
    
    - **_Date (Fecha)._**
+   - Temperature.
 
 **_Traducido del español:_**
 
