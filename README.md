@@ -30,6 +30,7 @@
    - **_Temperature (Temperatura)._**
    - **_Weight (Peso)._**
    - **_Height (Altura)._**
+   - Diagnosis.
 
 **_Traducido del español:_**
 
