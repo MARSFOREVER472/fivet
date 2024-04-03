@@ -22,6 +22,8 @@
  - **_Patient photo (It is not taken into account when testing it but it is considered in the project(Foto))._**
  - **_Person (Persona)._**
 
+What attributes would you take into account for each class in the project?
+
 **_Traducido del español:_**
 
 ### Descripción del trabajo:
