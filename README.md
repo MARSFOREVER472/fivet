@@ -41,7 +41,7 @@
   
  - **_For photo class (Foto):_**
 
-   - URL.
+   - _URL._
 
 **_Traducido del español:_**
 
