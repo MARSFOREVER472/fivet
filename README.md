@@ -39,7 +39,7 @@
    - **_Name (Name of the medical exam (Nombre))._**
    - **_Date (Fecha (Date the exam was taken))._**
   
- - _For photo class (Foto):_
+ - **_For photo class (Foto):_**
 
    - URL.
 
