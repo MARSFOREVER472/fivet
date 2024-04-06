@@ -41,6 +41,8 @@
   
  - For photo class (Foto):
 
+   - URL.
+
 **_Traducido del español:_**
 
 ### Descripción del trabajo:
