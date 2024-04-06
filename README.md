@@ -38,6 +38,8 @@
 
    - **_Name (Name of the medical exam (Nombre))._**
    - **_Date (Fecha (Date the exam was taken))._**
+  
+ - For photo class (Foto):
 
 **_Traducido del español:_**
 
