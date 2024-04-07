@@ -55,6 +55,8 @@
   
  - **_For the medical record class (Ficha Medica):_**
 
+   - Patient record number.
+
 **_Traducido del español:_**
 
 ### Descripción del trabajo:
