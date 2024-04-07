@@ -52,6 +52,8 @@
  - **_For photo class (Foto):_**
 
    - **_URL._**
+  
+ - For the medical record class (Ficha Medica):
 
 **_Traducido del español:_**
 
