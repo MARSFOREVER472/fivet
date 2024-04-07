@@ -63,7 +63,7 @@
    - **_Patient gender (Sexo del paciente)._**
    - **_Patient type (Tipo del paciente al que pertenece)._**
    - **_Patient owner (Dueño del paciente)._**
-   - Patient number controls.
+   - Patient number controls (Cantidad de controles del paciente).
 
 **_Traducido del español:_**
 
