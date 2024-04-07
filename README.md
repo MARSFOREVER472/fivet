@@ -62,7 +62,7 @@
    - **_Patient breed (Raza del paciente)._**
    - **_Patient gender (Sexo del paciente)._**
    - **_Patient type (Tipo del paciente al que pertenece)._**
-   - Patient owner.
+   - Patient owner (Dueño del paciente).
 
 **_Traducido del español:_**
 
