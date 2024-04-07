@@ -57,7 +57,7 @@
 
    - **_Patient record number (Numero de ficha del paciente)._**
    - **_Patient name (Nombre del paciente)._**
-   - Patient species.
+   - _Patient species._
 
 **_Traducido del español:_**
 
