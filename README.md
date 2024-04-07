@@ -55,7 +55,7 @@
   
  - **_For the medical record class (Ficha Medica):_**
 
-   - _Patient record number (Numero de ficha del paciente)._
+   - **_Patient record number (Numero de ficha del paciente)._**
 
 **_Traducido del español:_**
 
