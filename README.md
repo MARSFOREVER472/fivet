@@ -40,6 +40,8 @@
    - **_Date (Fecha (Date the exam was taken))._**
   
  - **_For the person class (Persona):_**
+
+   - ID.
   
  - **_For photo class (Foto):_**
 
