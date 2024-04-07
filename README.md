@@ -46,6 +46,7 @@
    - **_Address (Direccion)._**
    - **_Landline number (Telefono fijo)._**
    - **_Mobile number (Telefono movil)._**
+   - E-mail.
   
  - **_For photo class (Foto):_**
 
