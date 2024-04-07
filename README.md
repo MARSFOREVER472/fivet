@@ -59,6 +59,7 @@
    - **_Patient name (Nombre del paciente)._**
    - **_Patient species (Especie del paciente)._**
    - **_Birthdate (Fecha de nacimiento)._**
+   - Patient breed.
 
 **_Traducido del español:_**
 
