@@ -47,6 +47,7 @@
    - **_Landline number (Telefono fijo)._**
    - **_Mobile number (Telefono movil)._**
    - **_E-mail (Correo)._**
+   - Password.
   
  - **_For photo class (Foto):_**
 
