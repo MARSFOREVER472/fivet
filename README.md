@@ -53,7 +53,7 @@
 
    - **_URL._**
   
- - For the medical record class (Ficha Medica):
+ - _For the medical record class (Ficha Medica):_
 
 **_Traducido del español:_**
 
