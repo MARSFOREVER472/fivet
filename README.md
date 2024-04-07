@@ -41,7 +41,7 @@
   
  - **_For the person class (Persona):_**
 
-   - ID.
+   - ID (RUT).
   
  - **_For photo class (Foto):_**
 
