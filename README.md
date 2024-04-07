@@ -58,7 +58,7 @@
    - **_Patient record number (Numero de ficha del paciente)._**
    - **_Patient name (Nombre del paciente)._**
    - **_Patient species (Especie del paciente)._**
-   - Birthdate.
+   - Birthdate (Fecha de nacimiento).
 
 **_Traducido del español:_**
 
