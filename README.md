@@ -61,7 +61,7 @@
    - **_Birthdate (Fecha de nacimiento)._**
    - **_Patient breed (Raza del paciente)._**
    - **_Patient gender (Sexo del paciente)._**
-   - Patient type.
+   - Patient type (Tipo del paciente al que pertenece).
 
 **_Traducido del español:_**
 
