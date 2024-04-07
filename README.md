@@ -43,6 +43,7 @@
 
    - **_ID (RUT)._**
    - **_Name (Nombre)._**
+   - Address.
   
  - **_For photo class (Foto):_**
 
