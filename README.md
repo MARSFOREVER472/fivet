@@ -44,6 +44,7 @@
    - **_ID (RUT)._**
    - **_Name (Nombre)._**
    - **_Address (Direccion)._**
+   - Landline.
   
  - **_For photo class (Foto):_**
 
