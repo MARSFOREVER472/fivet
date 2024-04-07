@@ -39,7 +39,7 @@
    - **_Name (Name of the medical exam (Nombre))._**
    - **_Date (Fecha (Date the exam was taken))._**
   
-  - For the person class:
+  - For the person class (Persona):
   
  - **_For photo class (Foto):_**
 
