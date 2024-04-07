@@ -42,7 +42,7 @@
  - **_For the person class (Persona):_**
 
    - **_ID (RUT)._**
-   - Name (Nombre).
+   - _Name (Nombre)._
   
  - **_For photo class (Foto):_**
 
