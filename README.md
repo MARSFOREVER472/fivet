@@ -71,6 +71,8 @@
   
   - **_Client (FivetClient)._**
   - **_Server (FivetServer)._**
+ 
+ - Also, in this project one of these methods is considered to be able to effectively perform unit testing:
 
 **_Traducido del español:_**
 
