@@ -69,7 +69,7 @@
 
 - **_The service of a veterinary record is made up of 2 modalities:_**
   
-  - Client (FivetClient).
+  - _Client (FivetClient)._
 
 **_Traducido del español:_**
 
