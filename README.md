@@ -67,7 +67,7 @@
 
 ## Regarding the service of a veterinary record...
 
-- The service of a veterinary record is made up of 2 modalities:
+- _The service of a veterinary record is made up of 2 modalities:_
 
 **_Traducido del español:_**
 
