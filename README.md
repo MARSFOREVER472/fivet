@@ -75,7 +75,7 @@
  - **_Also, in this project one of these methods is considered to be able to effectively perform unit testing:_**
 
    - **_Database (Database connections)._**
-   - gRPC.
+   - gRPC (GOOGLE Remote Procedure Call).
 
 **_Traducido del español:_**
 
