@@ -70,7 +70,7 @@
 - **_The service of a veterinary record is made up of 2 modalities:_**
   
   - **_Client (FivetClient)._**
-  - Server.
+  - Server (FivetServer).
 
 **_Traducido del español:_**
 
