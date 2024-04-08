@@ -76,7 +76,7 @@
 
    - **_Database (Database connections)._**
    - **_gRPC (GOOGLE Remote Procedure Call)._**
-   - Problem General Model.
+   - _Problem General Model._
 
 **_Traducido del español:_**
 
