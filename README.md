@@ -74,6 +74,8 @@
  
  - **_Also, in this project one of these methods is considered to be able to effectively perform unit testing:_**
 
+   - Database.
+
 **_Traducido del español:_**
 
 ### Descripción del trabajo:
