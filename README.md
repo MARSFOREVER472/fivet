@@ -74,7 +74,7 @@
  
  - **_Also, in this project one of these methods is considered to be able to effectively perform unit testing:_**
 
-   - Database (Database connections).
+   - _Database (Database connections)._
 
 **_Traducido del español:_**
 
