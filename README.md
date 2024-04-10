@@ -84,7 +84,7 @@
 
 ### Message 2: Medical Record Entity
 
-Message 3: Control Entity
+### Message 3: Control Entity
 
 **_Traducido del español:_**
 
