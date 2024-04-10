@@ -84,6 +84,8 @@
 
 ### Message 2: Medical Record Entity
 
+Message 3: Control Entity
+
 **_Traducido del español:_**
 
 ### Descripción del trabajo:
