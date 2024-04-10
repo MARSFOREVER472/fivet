@@ -92,7 +92,7 @@
 
 ### Message 5: To add a medical record from your entity (Ficha Medica)
 
-Message 6: To retrieve a medical record
+### Message 6: To retrieve a medical record
 
 **_Traducido del español:_**
 
