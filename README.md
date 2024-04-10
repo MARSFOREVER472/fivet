@@ -82,7 +82,7 @@
 
 ### Message 1: Persona Entity
 
-Message 2: Medical Record Entity
+### Message 2: Medical Record Entity
 
 **_Traducido del español:_**
 
