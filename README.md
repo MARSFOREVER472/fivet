@@ -82,31 +82,59 @@
 
 ### Message 1: Persona Entity
 
+EN INSTANTES...
+
 ### Message 2: Medical Record Entity
+
+EN INSTANTES...
 
 ### Message 3: Control Entity
 
+EN INSTANTES...
+
 ### Depending on the person's gender
+
+EN INSTANTES...
 
 ### Message 4: Ficha Medica Reply Entity
 
+EN INSTANTES...
+
 ### Message 5: To add a medical record from your entity (Ficha Medica)
+
+EN INSTANTES...
 
 ### Message 6: To retrieve a medical record
 
+EN INSTANTES...
+
 ### Message 7: To search for a medical record that is requested
+
+EN INSTANTES...
 
 ### Message 8: Add a requested person
 
+EN INSTANTES...
+
 ### Message 9: Add a medical check from your entity
+
+EN INSTANTES...
 
 ### Message 10: Request medical checks
 
+EN INSTANTES...
+
 ### Message 11: To authenticate a user using their credentials
+
+EN INSTANTES...
 
 ### Message 12: To bring a person back from the system
 
+EN INSTANTES...
+
 ### Through a veterinary record service
+
+EN INSTANTES...
 
 **_Traducido del español:_**
 
