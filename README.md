@@ -80,7 +80,7 @@
   
  - **_The .proto file is distributed as follows in code:_**
 
-### Messsage 1: Persona Entity
+### Message 1: Persona Entity
 
 Message 2: Medical Record Entity
 
