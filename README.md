@@ -77,6 +77,8 @@
    - **_Database (Database connections)._**
    - **_gRPC (GOOGLE Remote Procedure Call)._**
    - **_Problem General Model._**
+  
+ The .proto file is distributed as follows in code:
 
 **_Traducido del español:_**
 
