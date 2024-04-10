@@ -80,7 +80,7 @@
   
  - **_The .proto file is distributed as follows in code:_**
 
-Messsage 1: Persona Entity
+### Messsage 1: Persona Entity
 
 **_Traducido del español:_**
 
