@@ -94,7 +94,7 @@
 
 ### Message 6: To retrieve a medical record
 
-Message 7: To search for a medical record that is requested
+### Message 7: To search for a medical record that is requested
 
 **_Traducido del español:_**
 
