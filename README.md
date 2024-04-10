@@ -98,6 +98,8 @@
 
 ### Message 8: Add a requested person
 
+Message 9 Add a medical check from your entity
+
 **_Traducido del español:_**
 
 ### Descripción del trabajo:
