@@ -88,7 +88,7 @@
 
 ### Depending on the person's gender
 
-Message 4: Ficha Medica Reply Entity
+### Message 4: Ficha Medica Reply Entity
 
 **_Traducido del español:_**
 
