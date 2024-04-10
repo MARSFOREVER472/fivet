@@ -102,6 +102,8 @@
 
 ### Message 10: Request medical checks
 
+Message 11: To authenticate a user using their credentials
+
 **_Traducido del español:_**
 
 ### Descripción del trabajo:
