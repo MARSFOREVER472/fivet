@@ -78,7 +78,7 @@
    - **_gRPC (GOOGLE Remote Procedure Call)._**
    - **_Problem General Model._**
   
- - _The .proto file is distributed as follows in code:_
+ - **_The .proto file is distributed as follows in code:_**
 
 **_Traducido del español:_**
 
