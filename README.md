@@ -100,7 +100,7 @@
 
 ### Message 9: Add a medical check from your entity
 
-Message 10: Request medical checks
+### Message 10: Request medical checks
 
 **_Traducido del español:_**
 
