@@ -96,6 +96,8 @@
 
 ### Message 7: To search for a medical record that is requested
 
+Message 8: Add a requested person
+
 **_Traducido del español:_**
 
 ### Descripción del trabajo:
