@@ -106,7 +106,8 @@
 
 ### Message 12: To bring a person back from the system
 
-Through a veterinary record service
+### Through a veterinary record service
+
 **_Traducido del español:_**
 
 ### Descripción del trabajo:
