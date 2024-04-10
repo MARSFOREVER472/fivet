@@ -82,6 +82,8 @@
 
 ### Messsage 1: Persona Entity
 
+Message 2: Medical Record Entity
+
 **_Traducido del español:_**
 
 ### Descripción del trabajo:
