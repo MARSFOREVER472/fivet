@@ -90,7 +90,7 @@
 
 ### Message 4: Ficha Medica Reply Entity
 
-Message 5: To add a medical record from your entity (Ficha Medica)
+### Message 5: To add a medical record from your entity (Ficha Medica)
 
 **_Traducido del español:_**
 
