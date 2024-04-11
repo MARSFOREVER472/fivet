@@ -184,7 +184,21 @@ message PersonaReply {
 
 ### Through a veterinary record service
 
-EN INSTANTES...
+service FivetService {
+
+  rpc authenticate(AuthenticateReq) returns(PersonaReply) {}
+
+  rpc addControl(AddControlReq) returns(FichaMedicaReply) {}
+
+  rpc retrieveFicha(RetrieveFichaMedicaReq) returns(FichaMedicaReply) {}
+
+  rpc searchFicha(SearchFichaMedicaReq) returns (stream FichaMedicaEntity) {}
+
+  rpc addFicha(AddFichaReq) returns(FichaMedicaReply) {}
+
+  rpc addPersona(AddPersonaReq) returns (PersonaReply) {}
+
+}
 
 **_Traducido del español:_**
 
