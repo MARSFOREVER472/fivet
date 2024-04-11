@@ -178,7 +178,9 @@ message AuthenticateReq {
 
 ### Message 12: To bring a person back from the system
 
-EN INSTANTES...
+message PersonaReply {
+  PersonaEntity persona = 1;
+}
 
 ### Through a veterinary record service
 
