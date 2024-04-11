@@ -153,7 +153,9 @@ message SearchFichaMedicaReq {
 
 ### Message 8: Add a requested person
 
-EN INSTANTES...
+message AddPersonaReq {
+  PersonaEntity persona = 1;
+}
 
 ### Message 9: Add a medical check from your entity
 
