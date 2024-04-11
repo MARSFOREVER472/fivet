@@ -94,7 +94,18 @@ message PersonaEntity {
 ```
 ### Message 2: Medical Record Entity
 
-EN INSTANTES...
+message FichaMedicaEntity {
+  int32 numeroFicha = 1;
+  string nombrePaciente = 2;
+  string especie = 3;
+  string fechaNacimiento = 4;
+  string raza = 5;
+  SexoEntity sexo = 6;
+  string color = 7;
+  string tipo = 8;
+  PersonaEntity duenio = 9;
+  repeated ControlEntity controles = 10;
+}
 
 ### Message 3: Control Entity
 
