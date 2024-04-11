@@ -171,7 +171,10 @@ message ControlRequest {
 
 ### Message 11: To authenticate a user using their credentials
 
-EN INSTANTES...
+message AuthenticateReq {
+  string login = 1;
+  string password = 2;
+}
 
 ### Message 12: To bring a person back from the system
 
