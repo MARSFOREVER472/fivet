@@ -152,11 +152,11 @@ message SearchFichaMedicaReq {
 }
 ```
 ### Message 8: Add a requested person
-
+```
 message AddPersonaReq {
   PersonaEntity persona = 1;
 }
-
+```
 ### Message 9: Add a medical check from your entity
 
 message AddControlReq {
