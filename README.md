@@ -82,7 +82,15 @@
 
 ### Message 1: Persona Entity
 
-EN INSTANTES...
+message PersonaEntity {
+  string rut = 1;
+  string nombre = 2;
+  string email = 3;
+  string direccion = 4;
+  string telefonoFijo = 5;
+  string telefonoMovil = 6;
+  string password = 7;
+}
 
 ### Message 2: Medical Record Entity
 
