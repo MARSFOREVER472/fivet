@@ -159,7 +159,9 @@ message AddPersonaReq {
 
 ### Message 9: Add a medical check from your entity
 
-EN INSTANTES...
+message AddControlReq {
+  ControlEntity control = 1;
+}
 
 ### Message 10: Request medical checks
 
