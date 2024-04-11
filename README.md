@@ -128,11 +128,11 @@ enum SexoEntity {
 }
 ```
 ### Message 4: Ficha Medica Reply Entity
-
+```
 message FichaMedicaReply {
   FichaMedicaEntity fichaMedica = 1;
 }
-
+```
 ### Message 5: To add a medical record from your entity (Ficha Medica)
 
 message AddFichaReq {
