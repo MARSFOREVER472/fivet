@@ -140,11 +140,11 @@ message AddFichaReq {
 }
 ```
 ### Message 6: To retrieve a medical record
-
+```
 message RetrieveFichaMedicaReq {
   int32 numeroFicha = 1;
 }
-
+```
 ### Message 7: To search for a medical record that is requested
 
 message SearchFichaMedicaReq {
