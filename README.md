@@ -121,7 +121,11 @@ message ControlEntity {
 
 ### Depending on the person's gender
 
-EN INSTANTES...
+enum SexoEntity {
+  UNDEFINED = 0;
+  MACHO = 1;
+  HEMBRA = 2;
+}
 
 ### Message 4: Ficha Medica Reply Entity
 
