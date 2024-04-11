@@ -177,11 +177,11 @@ message AuthenticateReq {
 }
 ```
 ### Message 12: To bring a person back from the system
-
+```
 message PersonaReply {
   PersonaEntity persona = 1;
 }
-
+```
 ### Through a veterinary record service
 
 service FivetService {
