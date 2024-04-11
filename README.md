@@ -165,7 +165,9 @@ message AddControlReq {
 
 ### Message 10: Request medical checks
 
-EN INSTANTES...
+message ControlRequest {
+  ControlEntity control = 1;
+}
 
 ### Message 11: To authenticate a user using their credentials
 
