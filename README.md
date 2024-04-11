@@ -93,7 +93,7 @@ message PersonaEntity {
 }
 ```
 ### Message 2: Medical Record Entity
-
+```
 message FichaMedicaEntity {
   int32 numeroFicha = 1;
   string nombrePaciente = 2;
@@ -106,7 +106,7 @@ message FichaMedicaEntity {
   PersonaEntity duenio = 9;
   repeated ControlEntity controles = 10;
 }
-
+```
 ### Message 3: Control Entity
 
 EN INSTANTES...
