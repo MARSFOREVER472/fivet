@@ -147,7 +147,9 @@ message RetrieveFichaMedicaReq {
 
 ### Message 7: To search for a medical record that is requested
 
-EN INSTANTES...
+message SearchFichaMedicaReq {
+  string query = 1;
+}
 
 ### Message 8: Add a requested person
 
