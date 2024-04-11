@@ -164,11 +164,11 @@ message AddControlReq {
 }
 ```
 ### Message 10: Request medical checks
-
+```
 message ControlRequest {
   ControlEntity control = 1;
 }
-
+```
 ### Message 11: To authenticate a user using their credentials
 
 message AuthenticateReq {
