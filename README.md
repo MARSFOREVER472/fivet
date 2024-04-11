@@ -81,7 +81,7 @@
  - **_The .proto file is distributed as follows in code:_**
 
 ### Message 1: Persona Entity
-
+```
 message PersonaEntity {
   string rut = 1;
   string nombre = 2;
@@ -91,7 +91,7 @@ message PersonaEntity {
   string telefonoMovil = 6;
   string password = 7;
 }
-
+```
 ### Message 2: Medical Record Entity
 
 EN INSTANTES...
