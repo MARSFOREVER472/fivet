@@ -109,7 +109,15 @@ message FichaMedicaEntity {
 ```
 ### Message 3: Control Entity
 
-EN INSTANTES...
+message ControlEntity {
+  string fecha = 1;
+  float temperatura = 2;
+  float peso = 3;
+  float altura = 4;
+  string diagnostico = 5;
+  PersonaEntity veterinario = 6;
+  FichaMedicaEntity fichaMedica = 7;
+}
 
 ### Depending on the person's gender
 
