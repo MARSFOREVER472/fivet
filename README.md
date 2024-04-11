@@ -183,7 +183,7 @@ message PersonaReply {
 }
 ```
 ### Through a veterinary record service
-
+```
 service FivetService {
 
   rpc authenticate(AuthenticateReq) returns(PersonaReply) {}
@@ -199,7 +199,7 @@ service FivetService {
   rpc addPersona(AddPersonaReq) returns (PersonaReply) {}
 
 }
-
+```
 **_Traducido del español:_**
 
 ### Descripción del trabajo:
