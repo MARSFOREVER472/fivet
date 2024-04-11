@@ -108,7 +108,7 @@ message FichaMedicaEntity {
 }
 ```
 ### Message 3: Control Entity
-
+```
 message ControlEntity {
   string fecha = 1;
   float temperatura = 2;
@@ -118,7 +118,7 @@ message ControlEntity {
   PersonaEntity veterinario = 6;
   FichaMedicaEntity fichaMedica = 7;
 }
-
+```
 ### Depending on the person's gender
 
 enum SexoEntity {
