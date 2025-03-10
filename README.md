@@ -19,7 +19,7 @@
  - **_Patient monitoring (Control)._**
  - **_Patient examination (Examen)._**
  - **_Patient medical record (Ficha Medica)._**
- - **_Patient photo (It is not taken into account when testing it but it is considered in the project(Foto))._**
+ - **_Patient photo (It is not taken into account when testing it but it is considered in the project (Foto))._**
  - **_Person (Persona)._**
 
 ## What attributes would you take into account for each class in the project?
