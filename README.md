@@ -4,7 +4,7 @@
 
 **_This is the Fivet project for the subject of the Development and Integration of Solutions course in 2022, with all the dependencies installed through a .gradle extension file, another .proto file to generate calls to the methods of some classes of said particular project._**
 
-### **_Use cases for creating a veterinary record (FiVet)_**
+### **_Use cases for creating a veterinary record (FiVet):_**
 
 1.- **Create Veterinary Record:** **_It begins when the veterinarian wants to create a record for a patient who does not have one. The veterinarian will have to record the patient's data and optionally the owner's data. For patient data, the veterinarian will have to enter the name, species, date of birth or age, breed, sex, color, and can take a photo at the time, or associate an image file from the device or through a link Regarding the owner, it is interesting to register the name, address, landline, mobile phone, email and RUT. You will also have to indicate whether the type of record is internal or external (in the case of a consultation for a patient who is not a client of the veterinary clinic)._**
 
