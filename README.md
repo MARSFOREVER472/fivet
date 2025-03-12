@@ -94,7 +94,7 @@ message PersonaEntity {
 }
 ```
 
-### Message 2: Medical Record Entity
+### _Message 2: Medical Record Entity_
 
 ```
 message FichaMedicaEntity {
