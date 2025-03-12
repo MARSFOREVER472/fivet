@@ -111,7 +111,7 @@ message FichaMedicaEntity {
 }
 ```
 
-### Message 3: Control Entity
+### _Message 3: Control Entity_
 
 ```
 message ControlEntity {
