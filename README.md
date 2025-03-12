@@ -112,6 +112,7 @@ message FichaMedicaEntity {
 ```
 
 ### Message 3: Control Entity
+
 ```
 message ControlEntity {
   string fecha = 1;
