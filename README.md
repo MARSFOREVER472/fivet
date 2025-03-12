@@ -143,7 +143,7 @@ message FichaMedicaReply {
 }
 ```
 
-### Message 5: To add a medical record from your entity (Ficha Medica)
+### _Message 5: To add a medical record from your entity (Ficha Medica)_
 
 ```
 message AddFichaReq {
