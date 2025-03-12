@@ -125,7 +125,7 @@ message ControlEntity {
 }
 ```
 
-### Depending on the person's gender
+### _Depending on the person's gender_
 
 ```
 enum SexoEntity {
