@@ -24,7 +24,7 @@
 
 ## **_What attributes would you take into account for each class in the project?_**
 
- - **_For the Control class:_**
+ - **_For the Control class (Control):_**
    
    - **_Date (Fecha)._**
    - **_Temperature (Temperatura)._**
