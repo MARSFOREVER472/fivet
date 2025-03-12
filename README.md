@@ -168,6 +168,7 @@ message SearchFichaMedicaReq {
 ```
 
 ### **_Message 8: Add a requested person_**
+
 ```
 message AddPersonaReq {
   PersonaEntity persona = 1;
