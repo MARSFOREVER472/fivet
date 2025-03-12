@@ -159,7 +159,7 @@ message RetrieveFichaMedicaReq {
 }
 ```
 
-### _Message 7: To search for a medical record that is requested_
+### **_Message 7: To search for a medical record that is requested_**
 ```
 message SearchFichaMedicaReq {
   string query = 1;
