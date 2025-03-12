@@ -95,6 +95,7 @@ message PersonaEntity {
 ```
 
 ### Message 2: Medical Record Entity
+
 ```
 message FichaMedicaEntity {
   int32 numeroFicha = 1;
