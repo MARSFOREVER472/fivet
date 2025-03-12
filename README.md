@@ -144,6 +144,7 @@ message FichaMedicaReply {
 ```
 
 ### Message 5: To add a medical record from your entity (Ficha Medica)
+
 ```
 message AddFichaReq {
   FichaMedicaEntity fichaMedica = 1;
