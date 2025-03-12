@@ -126,6 +126,7 @@ message ControlEntity {
 ```
 
 ### Depending on the person's gender
+
 ```
 enum SexoEntity {
   UNDEFINED = 0;
