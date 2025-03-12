@@ -134,6 +134,7 @@ enum SexoEntity {
   HEMBRA = 2;
 }
 ```
+
 ### Message 4: Ficha Medica Reply Entity
 ```
 message FichaMedicaReply {
