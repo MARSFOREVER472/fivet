@@ -190,6 +190,7 @@ message ControlRequest {
   ControlEntity control = 1;
 }
 ```
+
 ### Message 11: To authenticate a user using their credentials
 ```
 message AuthenticateReq {
