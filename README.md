@@ -110,6 +110,7 @@ message FichaMedicaEntity {
   repeated ControlEntity controles = 10;
 }
 ```
+
 ### Message 3: Control Entity
 ```
 message ControlEntity {
