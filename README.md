@@ -175,7 +175,7 @@ message AddPersonaReq {
 }
 ```
 
-### Message 9: Add a medical check from your entity
+### _Message 9: Add a medical check from your entity_
 ```
 message AddControlReq {
   ControlEntity control = 1;
