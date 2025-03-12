@@ -65,7 +65,7 @@
    - **_Patient owner (Dueño del paciente)._**
    - **_Patient number controls (Cantidad de controles del paciente)._**
 
-## _Regarding the service of a veterinary record..._
+## **_Regarding the service of a veterinary record..._**
 
 - **_The service of a veterinary record is made up of 2 modalities:_**
   
