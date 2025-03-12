@@ -151,7 +151,7 @@ message AddFichaReq {
 }
 ```
 
-### Message 6: To retrieve a medical record
+### _Message 6: To retrieve a medical record_
 ```
 message RetrieveFichaMedicaReq {
   int32 numeroFicha = 1;
