@@ -124,6 +124,7 @@ message ControlEntity {
   FichaMedicaEntity fichaMedica = 7;
 }
 ```
+
 ### Depending on the person's gender
 ```
 enum SexoEntity {
