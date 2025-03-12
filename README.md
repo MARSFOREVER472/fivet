@@ -135,7 +135,7 @@ enum SexoEntity {
 }
 ```
 
-### _Message 4: Ficha Medica Reply Entity_
+### **_Message 4: Ficha Medica Reply Entity_**
 ```
 message FichaMedicaReply {
   FichaMedicaEntity fichaMedica = 1;
