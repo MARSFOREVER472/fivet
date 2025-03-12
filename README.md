@@ -166,6 +166,7 @@ message SearchFichaMedicaReq {
   string query = 1;
 }
 ```
+
 ### Message 8: Add a requested person
 ```
 message AddPersonaReq {
