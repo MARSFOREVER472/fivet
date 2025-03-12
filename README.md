@@ -150,6 +150,7 @@ message AddFichaReq {
   FichaMedicaEntity fichaMedica = 1;
 }
 ```
+
 ### Message 6: To retrieve a medical record
 ```
 message RetrieveFichaMedicaReq {
