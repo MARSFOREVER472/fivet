@@ -81,6 +81,7 @@
  - **_The ```.proto``` file is distributed as follows in code:_**
 
 ### **_Message 1: Persona Entity_**
+
 ```
 message PersonaEntity {
   string rut = 1;
