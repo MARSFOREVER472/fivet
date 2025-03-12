@@ -93,6 +93,7 @@ message PersonaEntity {
   string password = 7;
 }
 ```
+
 ### Message 2: Medical Record Entity
 ```
 message FichaMedicaEntity {
