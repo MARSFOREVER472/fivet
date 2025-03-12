@@ -183,7 +183,7 @@ message AddControlReq {
 }
 ```
 
-### _Message 10: Request medical checks_
+### **_Message 10: Request medical checks_**
 ```
 message ControlRequest {
   ControlEntity control = 1;
