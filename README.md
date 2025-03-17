@@ -191,7 +191,7 @@ message ControlRequest {
 }
 ```
 
-### Message 11: To authenticate a user using their credentials
+### _Message 11: To authenticate a user using their credentials_
 ```
 message AuthenticateReq {
   string login = 1;
