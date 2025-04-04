@@ -201,6 +201,7 @@ message AuthenticateReq {
 ```
 
 ### **_Message 12: To bring a person back from the system_**
+
 ```
 message PersonaReply {
   PersonaEntity persona = 1;
