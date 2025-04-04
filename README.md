@@ -207,6 +207,7 @@ message PersonaReply {
   PersonaEntity persona = 1;
 }
 ```
+
 ### Through a veterinary record service
 ```
 service FivetService {
