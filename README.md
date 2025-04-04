@@ -198,7 +198,7 @@ message AuthenticateReq {
   string password = 2;
 }
 ```
-### _Message 12: To bring a person back from the system_
+### **_Message 12: To bring a person back from the system_**
 ```
 message PersonaReply {
   PersonaEntity persona = 1;
