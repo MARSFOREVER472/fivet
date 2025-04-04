@@ -208,7 +208,7 @@ message PersonaReply {
 }
 ```
 
-### Through a veterinary record service
+### _Through a veterinary record service_
 
 ```
 service FivetService {
