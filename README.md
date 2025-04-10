@@ -234,7 +234,7 @@ service FivetService {
 
 **_Este es el proyecto Fivet para la asignatura del curso Desarrollo e Integración de Soluciones año 2022, con todas las dependencias instaladas mediante un archivo de extensión .gradle, otro archivo .proto para generar llamados a los métodos de algunas clases de dicho proyecto en particular._**
 
-### _Casos de uso para la realización de una ficha veterinaria (FiVet)_
+### **_Casos de uso para la realización de una ficha veterinaria (FiVet)_**
 
 1.- **Crear Ficha Veterinaria:** **_Comienza cuando el veterinario desea crear una ficha para un paciente que no tiene una. El veterinario tendrá que registrar los datos del paciente y opcionalmente los del dueño. Para los datos del paciente, el veterinario tendrá que ingresar el nombre, especie, fecha de nacimiento o edad, raza, sexo, color, y podrá tomar una foto en el momento, o asociar un archivo de imagen desde el dispositivo o por medio de un link. Con respecto al dueño, interesa registrar el nombre, dirección, teléfono fijo, teléfono móvil, email y RUT. Además tendrá que indicar si el tipo de ficha es interno o externo (en caso de una consulta para un paciente que no es cliente de la veterinaria)_.**
 
