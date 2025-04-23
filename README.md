@@ -253,7 +253,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
   - **_Foto del paciente (No lo toma en cuenta al testearlo pero se considera en el proyecto)._**
   - **_Persona._**
 
- ## _Qué atributos tomaría en cuenta para cada clase del proyecto?_
+ ## **_Qué atributos tomaría en cuenta para cada clase del proyecto?_**
 
   - **_Para la clase Control:_**
    
