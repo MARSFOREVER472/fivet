@@ -297,7 +297,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
     - **_Cantidad de controles del paciente._**
 
 
-## Respecto al servicio de una ficha veterinaria...
+## _Respecto al servicio de una ficha veterinaria..._
 
 - **_El servicio de una ficha veterinaria se componen de 2 modalidades:_**
 
