@@ -460,7 +460,7 @@ service FivetService {
 }
 ```
 
-## Arquitectura de un ORM
+## _Arquitectura de un ORM_
 
 **_Acerca de cómo se construye un programa siguiendo este modelo que está aquí abajo:_**
 
