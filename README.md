@@ -470,6 +470,6 @@ service FivetService {
 
 **_Muchas gracias!!!_**
 
-## **_Integrante:_**
+### **_Integrante:_**
 
 **_Marcelo Andrés Lam Biaggini_**
