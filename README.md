@@ -1,4 +1,4 @@
-# **_Proyecto Fivet_**
+# **_Proyecto FiVet_**
 
 ### **_PROJECT DESCRIPTION:_**
 
