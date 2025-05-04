@@ -1,4 +1,4 @@
-# **_Proyecto FiVet (Ficha veterinaria)_**
+# **_Proyecto FiVet (Ficha Veterinaria)_**
 
 ### **_PROJECT DESCRIPTION:_**
 
