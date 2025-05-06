@@ -312,7 +312,7 @@ realiza el caso de uso Crear Ficha Veterinaria. El Veterinario ingresará los da
       
 - **_El archivo ```.proto``` se distribuye de la siguiente manera en código:_**
 
-### _Mensaje 1: Entidad Persona_
+### **_Mensaje 1: Entidad Persona_**
 
 ```
 message PersonaEntity {
