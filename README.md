@@ -343,7 +343,7 @@ message FichaMedicaEntity {
 }
 ```
 
-### Mensaje 3: Entidad Control
+### _Mensaje 3: Entidad Control_
 
 ```
 message ControlEntity {
