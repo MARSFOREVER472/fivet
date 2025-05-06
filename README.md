@@ -466,7 +466,7 @@ service FivetService {
 
 ![image](https://github.com/MARSFOREVER472/fivet/assets/69094327/f13efed6-93a8-4410-a76f-88f947b3031b)
 
-**_Espero que esto les sirva de apoyo!!!_**
+**_Espero que esto les sirva de ayuda!!!_**
 
 **_Muchas gracias!!!_**
 
