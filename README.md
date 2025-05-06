@@ -326,7 +326,7 @@ message PersonaEntity {
 }
 ```
 
-### _Mensaje 2: Entidad Ficha Medica_
+### **_Mensaje 2: Entidad Ficha Medica_**
 
 ```
 message FichaMedicaEntity {
