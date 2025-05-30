@@ -432,7 +432,7 @@ message AuthenticateReq {
 }
 ```
 
-### Mensaje 12: Para traer de regreso a una persona desde el sistema.
+### _Mensaje 12: Para traer de regreso a una persona desde el sistema._
 
 ```
 message PersonaReply {
