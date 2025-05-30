@@ -440,7 +440,7 @@ message PersonaReply {
 }
 ```
 
-### _Mediante un servicio de una ficha veterinaria._
+### **_Mediante un servicio de una ficha veterinaria._**
 
 ```
 service FivetService {
