@@ -37,7 +37,7 @@
  - **_For the exam (Examen) class:_**
 
    - **_Name (Name of the medical exam (Nombre))._**
-   - **_Date (Fecha (Date the exam was taken))._**
+   - **_Date ((Date the exam was taken))._**
   
  - **_For the person class (Persona):_**
 
