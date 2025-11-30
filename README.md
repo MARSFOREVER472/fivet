@@ -266,7 +266,7 @@ service FivetService {
    
   - **_Para la clase Examen:_**
 
-    - **_Nombre (Nombre del examen médico)._**
+    - **_Nombre (Nombre del Examen Médico)._**
     - **_Fecha (Fecha en la que se realizó el examen)._**
 
   - **_Para la clase Persona:_**
