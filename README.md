@@ -366,7 +366,7 @@ enum SexoEntity {
 }
 ```
 
-### Mensaje 4: Respuesta de la Entidad Ficha médica
+### **_Mensaje 4: Respuesta de la Entidad Ficha médica_**
 
 ```
 message FichaMedicaReply {
