@@ -390,7 +390,7 @@ message RetrieveFichaMedicaReq {
 }
 ```
 
-### _Mensaje 7: Para buscar una ficha médica a la cual se le solicita._
+### **_Mensaje 7: Para buscar una ficha médica a la cual se le solicita._**
 
 ```
 message SearchFichaMedicaReq {
