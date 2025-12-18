@@ -382,7 +382,7 @@ message AddFichaReq {
 }
 ```
 
-### _Mensaje 6: Para recuperar una ficha médica._
+### **_Mensaje 6: Para recuperar una ficha médica._**
 
 ```
 message RetrieveFichaMedicaReq {
