@@ -398,7 +398,7 @@ message SearchFichaMedicaReq {
 }
 ```
 
-### Mensaje 8: Agregar una persona solicitada.
+### _Mensaje 8: Agregar una persona solicitada._
 
 ```
 message AddPersonaReq {
