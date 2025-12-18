@@ -374,7 +374,7 @@ message FichaMedicaReply {
 }
 ```
 
-### Mensaje 5: Para añadir una ficha médica desde su entidad (Ficha Médica).
+### _Mensaje 5: Para añadir una ficha médica desde su entidad (Ficha Médica)._
 
 ```
 message AddFichaReq {
