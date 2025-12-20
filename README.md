@@ -406,7 +406,7 @@ message AddPersonaReq {
 }
 ```
 
-### Mensaje 9: Añadir un control médico desde su entidad (Control).
+### _Mensaje 9: Añadir un control médico desde su entidad (Control)._
 
 ```
 message AddControlReq {
