@@ -414,7 +414,7 @@ message AddControlReq {
 }
 ```
 
-### _Mensaje 10: Solicitar controles médicos._
+### **_Mensaje 10: Solicitar controles médicos._**
 
 ```
 message ControlRequest {
