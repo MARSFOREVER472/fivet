@@ -422,7 +422,7 @@ message ControlRequest {
 }
 ```
 
-### Mensaje 11: Para autenticar a un usuario mediante sus credenciales.
+### _Mensaje 11: Para autenticar a un usuario mediante sus credenciales._
 
 ```
 message AuthenticateReq {
