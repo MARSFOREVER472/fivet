@@ -143,7 +143,7 @@ message FichaMedicaReply {
 }
 ```
 
-### **_Message 5: To add a medical record from your entity (Ficha Medica)_**
+### **_Message 5: To add an medical record from your entity (Ficha Medica)_**
 
 ```
 message AddFichaReq {
@@ -151,7 +151,7 @@ message AddFichaReq {
 }
 ```
 
-### **_Message 6: To retrieve a medical record_**
+### **_Message 6: To retrieve an medical record_**
 
 ```
 message RetrieveFichaMedicaReq {
@@ -159,7 +159,7 @@ message RetrieveFichaMedicaReq {
 }
 ```
 
-### **_Message 7: To search for a medical record that is requested_**
+### **_Message 7: To search for an medical record that is requested_**
 
 ```
 message SearchFichaMedicaReq {
@@ -175,7 +175,7 @@ message AddPersonaReq {
 }
 ```
 
-### **_Message 9: Add a medical check from your entity_**
+### **_Message 9: Add an medical check from your entity_**
 
 ```
 message AddControlReq {
