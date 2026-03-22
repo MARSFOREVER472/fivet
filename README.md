@@ -356,7 +356,7 @@ message ControlEntity {
 }
 ```
 
-### **_Según género de la persona_**
+### **_Según género de la persona:_**
 
 ```
 enum SexoEntity {
