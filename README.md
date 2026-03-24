@@ -31,11 +31,17 @@
  - **_For the Control class (Control):_**
    
    - **_Date (Fecha)._**
+     
    - **_Temperature (Temperatura)._**
+     
    - **_Weight (Peso)._**
+     
    - **_Height (Altura)._**
+     
    - **_Diagnosis (Diagnostico)._**
+     
    - **_Vet (Veterinario)._**
+     
    - **_Medical record (Ficha Medica)._**
   
  - **_For the exam (Examen) class:_**
