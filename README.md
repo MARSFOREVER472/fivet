@@ -53,11 +53,17 @@
  - **_For the person class (Persona):_**
 
    - **_ID (RUT)._**
+     
    - **_Name (Nombre)._**
+     
    - **_Address (Direccion)._**
+     
    - **_Landline number (Telefono fijo)._**
+     
    - **_Mobile number (Telefono movil)._**
+     
    - **_E-mail (Correo)._**
+     
    - **_Password (Contraseña)._**
   
  - **_For photo class (Foto):_**
