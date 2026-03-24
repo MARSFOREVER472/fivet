@@ -73,13 +73,21 @@
  - **_For the medical record class (Ficha Medica):_**
 
    - **_Patient record number (Numero de ficha del paciente)._**
+     
    - **_Patient name (Nombre del paciente)._**
+     
    - **_Patient species (Especie del paciente)._**
+     
    - **_Birthdate (Fecha de nacimiento)._**
+     
    - **_Patient breed (Raza del paciente)._**
+     
    - **_Patient gender (Sexo del paciente)._**
+     
    - **_Patient type (Tipo del paciente al que pertenece)._**
+     
    - **_Patient owner (Dueño del paciente)._**
+     
    - **_Patient number controls (Cantidad de controles del paciente)._**
 
 ## **_Regarding the service of a veterinary record..._**
