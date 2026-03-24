@@ -87,6 +87,7 @@
 - **_The service of a veterinary record is made up of 2 modalities:_**
   
   - **_Client (FivetClient)._**
+    
   - **_Server (FivetServer)._**
  
  - **_Also, in this project one of these methods is considered to be able to effectively perform unit testing:_**
