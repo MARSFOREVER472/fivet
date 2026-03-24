@@ -275,9 +275,13 @@ service FivetService {
 **_El proyecto se divide por algunos de sus atributos a considerar:_**
 
   - **_Control del Paciente._**
+    
   - **_Examen del paciente._**
+    
   - **_Ficha Médica del paciente._**
+    
   - **_Foto del paciente (No lo toma en cuenta al testearlo pero se considera en el proyecto)._**
+    
   - **_Persona._**
 
  ## **_Qué atributos tomaría en cuenta para cada clase del proyecto?_**
