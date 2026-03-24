@@ -101,7 +101,9 @@
  - **_Also, in this project one of these methods is considered to be able to effectively perform unit testing:_**
 
    - **_Database (Database connections)._**
+     
    - **_GRPC (GOOGLE Remote Procedure Call)._**
+     
    - **_Problem General Model._**
   
  - **_The ```.proto``` file is distributed as follows in code:_**
