@@ -274,7 +274,7 @@ service FivetService {
 
 **_El proyecto se divide por algunos de sus atributos a considerar:_**
 
-  - **_Control del Paciente._**
+  - **_Control del paciente._**
     
   - **_Examen del paciente._**
     
