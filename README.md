@@ -289,11 +289,17 @@ service FivetService {
   - **_Para la clase Control:_**
    
     - **_Fecha._**
+      
     - **_Temperatura._**
+      
     - **_Peso._**
+      
     - **_Altura._**
+      
     - **_Diagnóstico._**
+    - 
     - **_Veterinario._**
+      
     - **_Ficha Médica._**
    
   - **_Para la clase Examen:_**
