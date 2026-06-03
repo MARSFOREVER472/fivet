@@ -311,11 +311,17 @@ service FivetService {
   - **_Para la clase Persona:_**
 
     - **_RUT._**
+      
     - **_Nombre._**
+      
     - **_Dirección._**
+      
     - **_Teléfono Fijo._**
+      
     - **_Teléfono Móvil._**
+      
     - **_Correo._**
+      
     - **_Contraseña._**
 
   - **_Para la clase Foto:_**
