@@ -354,6 +354,7 @@ service FivetService {
 - **_El servicio de una ficha veterinaria se componen de 2 modalidades:_**
 
   - **_Cliente (FivetClient)._**
+    
   - **_Servidor (FivetServer)._**
 
 - **_También, en este proyecto se considera uno de estos métodos para poder realizar efectivamente las pruebas unitarias:_**
