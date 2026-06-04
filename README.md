@@ -360,7 +360,9 @@ service FivetService {
 - **_También, en este proyecto se considera uno de estos métodos para poder realizar efectivamente las pruebas unitarias:_**
 
   - **_Database (Conexiones a la base de datos)._**
+    
   - **_gRPC (Protocolo de comunicación entre servicios)._**
+    
   - **_Modelo general del problema._**
       
 - **_El archivo ```.proto``` se distribuye de la siguiente manera mediante código:_**
