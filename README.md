@@ -331,13 +331,21 @@ service FivetService {
   - **_Para la clase Ficha Médica:_**
 
     - **_Número de Ficha del paciente._**
+      
     - **_Nombre del paciente._**
+      
     - **_Especie del paciente._**
+      
     - **_Fecha de nacimiento._**
+      
     - **_Raza del paciente._**
+      
     - **_Sexo del paciente._**
+      
     - **_Tipo del paciente._**
+      
     - **_Dueño del paciente._**
+      
     - **_Cantidad de controles del paciente._**
 
 
