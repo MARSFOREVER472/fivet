@@ -351,7 +351,7 @@ service FivetService {
 
 ## _Respecto al servicio de una ficha veterinaria..._
 
-- **_El servicio de una ficha veterinaria se componen de 2 modalidades:_**
+- **_El servicio de una ficha veterinaria está compuesta de 2 modalidades:_**
 
   - **_Cliente (FivetClient)._**
     
