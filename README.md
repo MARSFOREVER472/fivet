@@ -515,7 +515,7 @@ service FivetService {
 }
 ```
 
-## **_Arquitectura de un ORM_**
+## **_Arquitectura de un O.R.M._**
 
 ### **_Acerca de cómo se construye un programa siguiendo este modelo que está aquí abajo:_**
 
