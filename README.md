@@ -284,7 +284,7 @@ service FivetService {
     
   - **_Persona._**
 
- ## **_Qué atributos tomaría en cuenta para cada clase del proyecto?_**
+ ## **_¿Qué atributos tomaría en cuenta para cada clase del proyecto?_**
 
   - **_Para la clase Control:_**
    
