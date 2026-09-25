@@ -153,7 +153,7 @@ message ControlEntity {
 }
 ```
 
-### **_Depending on the person's gender:_**
+### **_Depending on the person's gender..._**
 
 ```
 enum SexoEntity {
