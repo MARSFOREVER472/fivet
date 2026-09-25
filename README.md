@@ -412,7 +412,7 @@ message ControlEntity {
 }
 ```
 
-### **_Según género de la persona:_**
+### **_Según género de la persona..._**
 
 ```
 enum SexoEntity {
